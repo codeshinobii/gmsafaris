@@ -30,73 +30,123 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-        /* Hero Section Styles */
-        .hero-section {
-          min-height: 80vh;
-          display: flex;
-          align-items: center;
-          position: relative;
-          overflow: hidden;
-          padding: 50px 0;
-        }
+  /* Hero Section Styles */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
 
-        .hero-images-container {
-          position: relative;
-          height: 650px;
-          width: 100%;
-        }
+.hero-images-container {
+    position: relative;
+    height: 650px;
+    width: 100%;
+}
 
-        .hero-image-main {
-          position: absolute;
-          width: 70%;
-          right: 0;
-          top: 50px;
-          z-index: 3;
-          transform: rotate(3deg);
-          border: 5px solid white;
-        }
+.hero-image-main {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    top: 50px;
+    z-index: 3;
+    transform: rotate(3deg);
+    border: 5px solid white;
+}
 
-        .hero-image-secondary-1 {
-          position: absolute;
-          width: 50%;
-          left: 0;
-          top: 0;
-          z-index: 2;
-          transform: rotate(-5deg);
-          border: 5px solid white;
-        }
+.hero-image-secondary-1 {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transform: rotate(-5deg);
+    border: 5px solid white;
+}
 
-        .hero-image-secondary-2 {
-          position: absolute;
-          width: 60%;
-          left: 20%;
-          bottom: 0;
-          z-index: 1;
-          transform: rotate(2deg);
-          border: 5px solid white;
-        }
+.hero-image-secondary-2 {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    bottom: 0;
+    z-index: 1;
+    transform: rotate(2deg);
+    border: 5px solid white;
+}
 
-        .white-gradient-overlay {
-          height: 1in; /* 1 inch tall gradient */
-          background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-          pointer-events: none; /* allows clicks to pass through */
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-        }
+.white-gradient-overlay {
+    height: 1in; /* 1 inch tall gradient */
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none; /* allows clicks to pass through */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-          .hero-section {
-            min-height: auto;
-            padding-top: 100px;
-            padding-bottom: 100px;
-          }
-          .hero-images-container {
-            height: 400px;
-            margin-top: 50px;
-          }
-        }
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .hero-images-container {
+        height: 550px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .hero-images-container {
+        height: 400px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .hero-images-container {
+        height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-image-main,
+    .hero-image-secondary-1,
+    .hero-image-secondary-2 {
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .hero-images-container {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem;
+    }
+}
 
         @media (max-width: 768px) {
           .hero-images-container {
@@ -428,18 +478,20 @@
     </div>
     <!-- Modal Search End -->
 
- <!-- Hero Start -->
-<div class="container-fluid hero-section position-relative py-6 my-6 mt-0" style="background-image: url('img/hero.jpg'); background-size: cover; background-position: center;">
+<!-- Hero Start -->
+<div class="container-fluid hero-section position-relative py-5 py-lg-6 my-0 my-lg-6 mt-0" style="background-image: url('img/hero.jpg'); background-size: cover; background-position: center;">
     <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
     <div class="white-gradient-overlay position-absolute bottom-0 start-0 w-100"></div>
     <div class="container position-relative">
         <div class="row g-5 align-items-center">
-            <div class="col-lg-7 col-md-12 text-white">
-                <h1 class="display-1 mb-4 animated bounceInDown hero-title">Experience <span class="gold-text">Wildlife</span> <br>Adventures in Tanzania</h1>
-                <a href="booking.html" class="btn gold-btn border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Book Safari</a>
-                <a href="safaris.html" class="btn gold-outline-btn border-2 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft">Explore Tours</a>
+            <div class="col-lg-7 col-md-12 text-white text-center text-lg-start order-lg-1 order-2">
+                <h1 class="display-3 display-lg-1 mb-3 mb-lg-4 animated bounceInDown hero-title">Experience <span class="gold-text">Wildlife</span> Adventures in Tanzania</h1>
+                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                    <a href="booking.html" class="btn gold-btn border-0 rounded-pill py-2 py-lg-3 px-4 px-md-5 me-lg-4 animated bounceInLeft">Book Safari</a>
+                    <a href="safaris.html" class="btn gold-outline-btn border-2 rounded-pill py-2 py-lg-3 px-4 px-md-5 animated bounceInLeft">Explore Tours</a>
+                </div>
             </div>
-            <div class="col-lg-5 col-md-12 position-relative">
+            <div class="col-lg-5 col-md-12 position-relative order-lg-2 order-1 mb-4 mb-lg-0">
                 <div class="hero-images-container">
                     <div class="hero-image-main rounded overflow-hidden shadow-lg animated zoomIn">
                         <img src="img/hero-2.jpeg" class="img-fluid" alt="Lion on Safari">
