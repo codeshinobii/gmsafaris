@@ -210,244 +210,209 @@
         <div class="container-fluid gallery-filter pb-6"> <!-- Removed top padding, added bottom padding -->
             <div class="container">
 
-                <!-- Filter Pills Start -->
-                <div class="row justify-content-center wow bounceInUp" data-wow-delay="0.2s">
-                    <div class="col-12 text-center mb-5">
-                        <ul class="nav nav-pills justify-content-center" id="gallery-pills" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#gallery-all" type="button" role="tab" aria-controls="gallery-all" aria-selected="true">All</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-wildlife-tab" data-bs-toggle="pill" data-bs-target="#gallery-wildlife" type="button" role="tab" aria-controls="gallery-wildlife" aria-selected="false">Wildlife</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-landscapes-tab" data-bs-toggle="pill" data-bs-target="#gallery-landscapes" type="button" role="tab" aria-controls="gallery-landscapes" aria-selected="false">Landscapes</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-people-tab" data-bs-toggle="pill" data-bs-target="#gallery-people" type="button" role="tab" aria-controls="gallery-people" aria-selected="false">People & Culture</button>
-                            </li>
-                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-lodges-tab" data-bs-toggle="pill" data-bs-target="#gallery-lodges" type="button" role="tab" aria-controls="gallery-lodges" aria-selected="false">Lodges & Camps</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Filter Pills End -->
+               <!-- Gallery Filter Buttons with Spacing -->
+<ul class="nav nav-pills justify-content-center mb-5" id="gallery-filter">
+    <li class="nav-item mx-2 mb-2">
+        <a class="nav-link active px-3 py-2" data-filter="all">All</a>
+    </li>
+    <li class="nav-item mx-2 mb-2">
+        <a class="nav-link px-3 py-2" data-filter="wildlife">Wildlife</a>
+    </li>
+    <li class="nav-item mx-2 mb-2">
+        <a class="nav-link px-3 py-2" data-filter="landscapes">Landscapes</a>
+    </li>
+    <li class="nav-item mx-2 mb-2">
+        <a class="nav-link px-3 py-2" data-filter="people">People & Culture</a>
+    </li>
+    <li class="nav-item mx-2 mb-2">
+        <a class="nav-link px-3 py-2" data-filter="lodges">Lodges & Camps</a>
+    </li>
+</ul>
 
-
-                <!-- Tab Content Start -->
-                <div class="tab-content" id="gallery-pills-content">
-
-                    <!-- Tab Pane: All -->
-                    <div class="tab-pane fade show active" id="gallery-all" role="tabpanel" aria-labelledby="pills-all-tab">
-                        <div class="row g-4">
-                            <!-- Add ALL your gallery items here, copying the structure from below -->
-                            <!-- Example Item (Wildlife) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-1.jpg" data-lightbox="wildlife" data-title="Majestic Lion in the Serengeti">
-                                        <img src="img/gallery/thumb/wildlife-1.jpg" class="img-fluid" alt="Majestic Lion in the Serengeti">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (Landscape) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/landscape-1.jpg" data-lightbox="landscapes" data-title="Sunrise over Ngorongoro Crater">
-                                        <img src="img/gallery/thumb/landscape-1.jpg" class="img-fluid" alt="Sunrise over Ngorongoro Crater">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (People) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/people-1.jpg" data-lightbox="people" data-title="Maasai Children near their Boma">
-                                        <img src="img/gallery/thumb/people-1.jpg" class="img-fluid" alt="Maasai Children near their Boma">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (Lodge) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/lodge-1.jpg" data-lightbox="lodges" data-title="Luxury Tented Camp under the Stars">
-                                        <img src="img/gallery/thumb/lodge-1.jpg" class="img-fluid" alt="Luxury Tented Camp under the Stars">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (Wildlife 2) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-2.jpg" data-lightbox="wildlife" data-title="Herd of Elephants in Tarangire">
-                                        <img src="img/gallery/thumb/wildlife-2.jpg" class="img-fluid" alt="Herd of Elephants in Tarangire">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (Landscape 2) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/landscape-2.jpg" data-lightbox="landscapes" data-title="Kilimanjaro Peak above the Clouds">
-                                        <img src="img/gallery/thumb/landscape-2.jpg" class="img-fluid" alt="Kilimanjaro Peak above the Clouds">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Add more items covering all categories -->
-                        </div>
-                    </div>
-
-                    <!-- Tab Pane: Wildlife -->
-                    <div class="tab-pane fade" id="gallery-wildlife" role="tabpanel" aria-labelledby="pills-wildlife-tab">
-                        <div class="row g-4">
-                            <!-- Add ONLY Wildlife items here -->
-                             <!-- Example Item (Wildlife) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-1.jpg" data-lightbox="wildlife" data-title="Majestic Lion in the Serengeti">
-                                        <img src="img/gallery/thumb/wildlife-1.jpg" class="img-fluid" alt="Majestic Lion in the Serengeti">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- Example Item (Wildlife 2) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-2.jpg" data-lightbox="wildlife" data-title="Herd of Elephants in Tarangire">
-                                        <img src="img/gallery/thumb/wildlife-2.jpg" class="img-fluid" alt="Herd of Elephants in Tarangire">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- *** Add more wildlife photos here *** -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-3.jpg" data-lightbox="wildlife" data-title="Leopard resting on a branch">
-                                        <img src="img/gallery/thumb/wildlife-3.jpg" class="img-fluid" alt="Leopard resting on a branch">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/wildlife-4.jpg" data-lightbox="wildlife" data-title="Zebras grazing on the plains">
-                                        <img src="img/gallery/thumb/wildlife-4.jpg" class="img-fluid" alt="Zebras grazing on the plains">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab Pane: Landscapes -->
-                    <div class="tab-pane fade" id="gallery-landscapes" role="tabpanel" aria-labelledby="pills-landscapes-tab">
-                         <div class="row g-4">
-                            <!-- Add ONLY Landscape items here -->
-                             <!-- Example Item (Landscape) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/landscape-1.jpg" data-lightbox="landscapes" data-title="Sunrise over Ngorongoro Crater">
-                                        <img src="img/gallery/thumb/landscape-1.jpg" class="img-fluid" alt="Sunrise over Ngorongoro Crater">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                              <!-- Example Item (Landscape 2) -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/landscape-2.jpg" data-lightbox="landscapes" data-title="Kilimanjaro Peak above the Clouds">
-                                        <img src="img/gallery/thumb/landscape-2.jpg" class="img-fluid" alt="Kilimanjaro Peak above the Clouds">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <!-- *** Add more landscape photos here *** -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/landscape-3.jpg" data-lightbox="landscapes" data-title="Baobab Tree at Sunset in Tarangire">
-                                        <img src="img/gallery/thumb/landscape-3.jpg" class="img-fluid" alt="Baobab Tree at Sunset in Tarangire">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                         </div>
-                    </div>
-
-                    <!-- Tab Pane: People & Culture -->
-                    <div class="tab-pane fade" id="gallery-people" role="tabpanel" aria-labelledby="pills-people-tab">
-                         <div class="row g-4">
-                            <!-- Add ONLY People & Culture items here -->
-                              <!-- Example Item (People) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/people-1.jpg" data-lightbox="people" data-title="Maasai Children near their Boma">
-                                        <img src="img/gallery/thumb/people-1.jpg" class="img-fluid" alt="Maasai Children near their Boma">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- *** Add more people/culture photos here *** -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/people-2.jpg" data-lightbox="people" data-title="Hadzabe Hunter with Bow">
-                                        <img src="img/gallery/thumb/people-2.jpg" class="img-fluid" alt="Hadzabe Hunter with Bow">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/people-3.jpg" data-lightbox="people" data-title="Local Market Scene in Arusha">
-                                        <img src="img/gallery/thumb/people-3.jpg" class="img-fluid" alt="Local Market Scene in Arusha">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                         </div>
-                    </div>
-
-                     <!-- Tab Pane: Lodges & Camps -->
-                    <div class="tab-pane fade" id="gallery-lodges" role="tabpanel" aria-labelledby="pills-lodges-tab">
-                         <div class="row g-4">
-                            <!-- Add ONLY Lodges & Camps items here -->
-                             <!-- Example Item (Lodge) -->
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/lodge-1.jpg" data-lightbox="lodges" data-title="Luxury Tented Camp under the Stars">
-                                        <img src="img/gallery/thumb/lodge-1.jpg" class="img-fluid" alt="Luxury Tented Camp under the Stars">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- *** Add more lodge/camp photos here *** -->
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/lodge-2.jpg" data-lightbox="lodges" data-title="Safari Lodge Pool with a View">
-                                        <img src="img/gallery/thumb/lodge-2.jpg" class="img-fluid" alt="Safari Lodge Pool with a View">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="gallery-item">
-                                    <a href="img/gallery/full/lodge-3.jpg" data-lightbox="lodges" data-title="Cozy Interior of a Safari Tent">
-                                        <img src="img/gallery/thumb/lodge-3.jpg" class="img-fluid" alt="Cozy Interior of a Safari Tent">
-                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                                    </a>
-                                </div>
-                            </div>
-                         </div>
-                    </div>
-
-                </div>
-                <!-- Tab Content End -->
-
+<!-- Gallery Items Container with Spacing -->
+<div class="row g-4 gallery-container">
+    <!-- Wildlife 1 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item wildlife" data-wow-delay="0.1s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/wildlife-1.jpg" data-lightbox="wildlife" data-title="Majestic Lion in the Serengeti">
+                <img src="img/gallery/thumb/wildlife-1.jpg" class="img-fluid w-100 rounded" alt="Majestic Lion in the Serengeti">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Majestic Lion</h5>
+                <p class="mb-0 text-muted">Serengeti National Park</p>
             </div>
         </div>
-        <!-- Gallery Content End -->
+    </div>
+    
+    <!-- Landscape 1 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item landscapes" data-wow-delay="0.2s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/landscape-1.jpg" data-lightbox="landscapes" data-title="Sunrise over Ngorongoro Crater">
+                <img src="img/gallery/thumb/landscape-1.jpg" class="img-fluid w-100 rounded" alt="Sunrise over Ngorongoro Crater">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Ngorongoro Sunrise</h5>
+                <p class="mb-0 text-muted">Ngorongoro Conservation Area</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- People 1 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item people" data-wow-delay="0.3s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/people-1.jpg" data-lightbox="people" data-title="Maasai Children near their Boma">
+                <img src="img/gallery/thumb/people-1.jpg" class="img-fluid w-100 rounded" alt="Maasai Children near their Boma">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Maasai Children</h5>
+                <p class="mb-0 text-muted">Traditional Village</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lodge 1 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item lodges" data-wow-delay="0.4s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/lodge-1.jpg" data-lightbox="lodges" data-title="Luxury Tented Camp under the Stars">
+                <img src="img/gallery/thumb/lodge-1.jpg" class="img-fluid w-100 rounded" alt="Luxury Tented Camp under the Stars">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Luxury Tented Camp</h5>
+                <p class="mb-0 text-muted">Serengeti</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wildlife 2 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item wildlife" data-wow-delay="0.5s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/wildlife-2.jpg" data-lightbox="wildlife" data-title="Herd of Elephants in Tarangire">
+                <img src="img/gallery/thumb/wildlife-2.jpg" class="img-fluid w-100 rounded" alt="Herd of Elephants in Tarangire">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Elephant Herd</h5>
+                <p class="mb-0 text-muted">Tarangire National Park</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Landscape 2 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item landscapes" data-wow-delay="0.6s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/landscape-2.jpg" data-lightbox="landscapes" data-title="Kilimanjaro Peak above the Clouds">
+                <img src="img/gallery/thumb/landscape-2.jpg" class="img-fluid w-100 rounded" alt="Kilimanjaro Peak above the Clouds">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Kilimanjaro Peak</h5>
+                <p class="mb-0 text-muted">Above the Clouds</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wildlife 3 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item wildlife" data-wow-delay="0.7s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/wildlife-3.jpg" data-lightbox="wildlife" data-title="Leopard resting on a branch">
+                <img src="img/gallery/thumb/wildlife-3.jpg" class="img-fluid w-100 rounded" alt="Leopard resting on a branch">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Leopard</h5>
+                <p class="mb-0 text-muted">Serengeti National Park</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wildlife 4 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item wildlife" data-wow-delay="0.8s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/wildlife-4.jpg" data-lightbox="wildlife" data-title="Zebras grazing on the plains">
+                <img src="img/gallery/thumb/wildlife-4.jpg" class="img-fluid w-100 rounded" alt="Zebras grazing on the plains">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Zebra Herd</h5>
+                <p class="mb-0 text-muted">Serengeti Plains</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Landscape 3 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item landscapes" data-wow-delay="0.9s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/landscape-3.jpg" data-lightbox="landscapes" data-title="Baobab Tree at Sunset in Tarangire">
+                <img src="img/gallery/thumb/landscape-3.jpg" class="img-fluid w-100 rounded" alt="Baobab Tree at Sunset in Tarangire">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Baobab Sunset</h5>
+                <p class="mb-0 text-muted">Tarangire National Park</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- People 2 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item people" data-wow-delay="1.0s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/people-2.jpg" data-lightbox="people" data-title="Hadzabe Hunter with Bow">
+                <img src="img/gallery/thumb/people-2.jpg" class="img-fluid w-100 rounded" alt="Hadzabe Hunter with Bow">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Hadzabe Hunter</h5>
+                <p class="mb-0 text-muted">Lake Eyasi Region</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- People 3 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item people" data-wow-delay="1.1s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/people-3.jpg" data-lightbox="people" data-title="Local Market Scene in Arusha">
+                <img src="img/gallery/thumb/people-3.jpg" class="img-fluid w-100 rounded" alt="Local Market Scene in Arusha">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Local Market</h5>
+                <p class="mb-0 text-muted">Arusha City</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lodge 2 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item lodges" data-wow-delay="1.2s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/lodge-2.jpg" data-lightbox="lodges" data-title="Safari Lodge Pool with a View">
+                <img src="img/gallery/thumb/lodge-2.jpg" class="img-fluid w-100 rounded" alt="Safari Lodge Pool with a View">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Lodge Pool</h5>
+                <p class="mb-0 text-muted">With Panoramic View</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lodge 3 -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp gallery-item lodges" data-wow-delay="1.3s">
+        <div class="gallery-item-inner h-100 p-3 bg-light rounded">
+            <a href="img/gallery/full/lodge-3.jpg" data-lightbox="lodges" data-title="Cozy Interior of a Safari Tent">
+                <img src="img/gallery/thumb/lodge-3.jpg" class="img-fluid w-100 rounded" alt="Cozy Interior of a Safari Tent">
+                <div class="gallery-overlay rounded"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <div class="pt-3">
+                <h5 class="mb-2">Safari Tent</h5>
+                <p class="mb-0 text-muted">Luxury Interior</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
         <!-- Footer Start -->
@@ -593,6 +558,31 @@
                  });
             });
          </script>
+         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const filterButtons = document.querySelectorAll('#gallery-filter .nav-link');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        this.classList.add('active');
+                        
+                        const filterValue = this.getAttribute('data-filter');
+                        
+                        galleryItems.forEach(item => {
+                            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+            </script>
 
     </body>
 
