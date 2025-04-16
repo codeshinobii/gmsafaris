@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Golden Memories Safaris - Tanzania Tour Operator</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="Golden Memories Safaris - Premium Tanzania safari tours and wildlife adventures" name="description">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+          min-height: 80vh;
+          display: flex;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+          padding: 50px 0;
+        }
+
+        .hero-images-container {
+          position: relative;
+          height: 650px;
+          width: 100%;
+        }
+
+        .hero-image-main {
+          position: absolute;
+          width: 70%;
+          right: 0;
+          top: 50px;
+          z-index: 3;
+          transform: rotate(3deg);
+          border: 5px solid white;
+        }
+
+        .hero-image-secondary-1 {
+          position: absolute;
+          width: 50%;
+          left: 0;
+          top: 0;
+          z-index: 2;
+          transform: rotate(-5deg);
+          border: 5px solid white;
+        }
+
+        .hero-image-secondary-2 {
+          position: absolute;
+          width: 60%;
+          left: 20%;
+          bottom: 0;
+          z-index: 1;
+          transform: rotate(2deg);
+          border: 5px solid white;
+        }
+
+        .white-gradient-overlay {
+          height: 1in; /* 1 inch tall gradient */
+          background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+          pointer-events: none; /* allows clicks to pass through */
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+          .hero-section {
+            min-height: auto;
+            padding-top: 100px;
+            padding-bottom: 100px;
+          }
+          .hero-images-container {
+            height: 400px;
+            margin-top: 50px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-images-container {
+            height: 300px;
+          }
+          .hero-image-main,
+          .hero-image-secondary-1,
+          .hero-image-secondary-2 {
+            border-width: 3px;
+          }
+          .white-gradient-overlay {
+            height: 0.5in; /* smaller gradient on mobile */
+          }
+        }
+
+        /* Text and Button Styling */
+        .hero-title {
+          color: white !important;
+          font-size: 4rem;
+          font-weight: bold;
+        }
+
+        .hero-title .gold-text {
+          color: #d69c40 !important;
+        }
+
+        .gold-btn {
+          background-color: #d69c40 !important;
+          color: white !important;
+          border-color: #d69c40 !important;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-weight: bold;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        .gold-outline-btn {
+          color: #d69c40 !important;
+          border: 2px solid #d69c40 !important;
+          background: transparent;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-weight: bold;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        .footer-logo {
+          max-width: 100%;
+          height: auto;
+          filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        /* Service Item Styles (Optional - Add if default styles aren't sufficient) */
+        .service-item {
+            transition: transform 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+        }
+        .service-icon {
+            text-align: center;
+        }
+        .service-content {
+            text-align: center;
+        }
+
+       /* NEW Service Card Styles (Version 5 - Icon Focused) */
+/* Original Service Card Styles (V5) - KEEP THESE */
+.service-link-v5 {
+    display: block; text-decoration: none; color: inherit;
+    height: 100%; border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.service-card-v5 {
+    background-color: #fff; padding: 2rem 1.5rem; /* Base padding */
+    border-radius: 0.5rem; text-align: center; height: 100%;
+    border: 1px solid #eee; display: flex; flex-direction: column;
+    align-items: center; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+.service-link-v5:hover .service-card-v5 {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-color: var(--bs-primary);
+}
+.service-icon-v5 {
+    width: 70px; height: 70px; border-radius: 50%; /* Base icon size */
+    background-color: var(--bs-primary); color: white;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem; /* Base margin */
+}
+.service-icon-v5 i {
+    font-size: 2.2rem; /* Base icon font size */
+    line-height: 1;
+}
+.service-text-v5 h4 {
+    margin-bottom: 0.75rem; font-size: 1.3rem; /* Base title size */
+    color: var(--bs-dark); font-weight: 600;
+}
+.service-text-v5 p {
+    color: #6c757d; font-size: 0.9rem; /* Base text size */
+    line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;
+}
+.service-text-v5 .learn-more {
+    color: var(--bs-primary); font-weight: 600; font-size: 0.9rem; /* Base link size */
+    display: inline-block; margin-top: auto; transition: color 0.2s ease;
+}
+.service-link-v5:hover .learn-more {
+    color: var(--bs-secondary);
+}
+.service-link-v5:hover { color: inherit; }
+
+/* ---- NEW: Adjustments for Smaller Cards in Single Row ---- */
+@media (min-width: 992px) { /* Apply adjustments only when lg grid (col-lg-2) is active */
+    .service-card-v5 {
+        padding: 1.5rem 0.75rem; /* Reduce padding */
+    }
+    .service-icon-v5 {
+        width: 55px; /* Smaller icon circle */
+        height: 55px;
+        margin-bottom: 1rem; /* Reduce space below icon */
+    }
+    .service-icon-v5 i {
+        font-size: 1.8rem; /* Smaller icon font */
+    }
+    .service-text-v5 h4 {
+        font-size: 1.1rem; /* Smaller title */
+        margin-bottom: 0.5rem;
+    }
+    .service-text-v5 p {
+        font-size: 0.85rem; /* Smaller description */
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+     .service-text-v5 .learn-more {
+        font-size: 0.8rem; /* Smaller link text */
+    }
+}
+@media (min-width: 1200px) { /* Optional: Further adjustments for XL screens */
+     .service-text-v5 h4 {
+        font-size: 1.15rem;
+    }
+}
+
+/* NEW Destination Card Styles (Version 2) */
+.destination-card-v2 {
+    display: block; /* Make the link fill the column */
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 400px; /* Set a fixed height for consistency, adjust as needed */
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #333; /* Fallback background */
+}
+
+.destination-card-v2:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.destination-card-v2 .card-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.destination-card-v2 .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destination-card-v2:hover .card-img {
+    transform: scale(1.08); /* Slightly zoom image on hover */
+}
+
+.destination-card-v2 .card-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.destination-card-v2 .card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    color: #fff;
+}
+.destination-card-v2 .card-subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.25rem;
+    display: block;
+}
+
+
+.destination-card-v2 .card-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3; /* Ensure it's above title overlay */
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.destination-card-v2:hover .card-hover-overlay {
+    opacity: 1;
+}
+
+.destination-card-v2 .hover-text {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.destination-card-v2 .btn-explore {
+    background-color: var(--bs-primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50rem; /* Pill shape */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.destination-card-v2 .btn-explore:hover {
+    background-color: var(--bs-secondary); /* Or darken primary */
+    color: white;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    .destination-card-v2 {
+        height: 350px; /* Slightly smaller height on tablets/mobile */
+    }
+    .destination-card-v2 .card-title {
+        font-size: 1.5rem;
+    }
+}
+        </style>
+
+</head>
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+
+<div class="container-fluid nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Golden Memories Safaris Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="safaris.html" class="nav-item nav-link">Safaris</a>
+                    <a href="destinations.html" class="nav-item nav-link">Destinations</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="blog.html" class="dropdown-item">Travel Blog</a>
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="booking.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+<!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search safaris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control bg-transparent p-3" placeholder="Search safaris, destinations, or experiences..." aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+ <!-- Hero Start -->
+<div class="container-fluid hero-section position-relative py-6 my-6 mt-0" style="background-image: url('img/hero.jpg'); background-size: cover; background-position: center;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
+    <div class="white-gradient-overlay position-absolute bottom-0 start-0 w-100"></div>
+    <div class="container position-relative">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7 col-md-12 text-white">
+                <h1 class="display-1 mb-4 animated bounceInDown hero-title">Experience <span class="gold-text">Wildlife</span> <br>Adventures in Tanzania</h1>
+                <a href="booking.html" class="btn gold-btn border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Book Safari</a>
+                <a href="safaris.html" class="btn gold-outline-btn border-2 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft">Explore Tours</a>
+            </div>
+            <div class="col-lg-5 col-md-12 position-relative">
+                <div class="hero-images-container">
+                    <div class="hero-image-main rounded overflow-hidden shadow-lg animated zoomIn">
+                        <img src="img/hero-2.jpeg" class="img-fluid" alt="Lion on Safari">
+                    </div>
+                    <div class="hero-image-secondary-1 rounded overflow-hidden shadow-lg animated zoomIn" style="animation-delay: 0.3s;">
+                        <img src="img/hero-1.jpeg" class="img-fluid" alt="Elephants on Safari">
+                    </div>
+                    <div class="hero-image-secondary-2 rounded overflow-hidden shadow-lg animated zoomIn" style="animation-delay: 0.6s;">
+                        <img src="img/hero-3.jpeg" class="img-fluid" alt="Hot Air Balloon Safari">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+<!-- About Satrt -->
+    <div class="container-fluid py-6">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                    <img src="img/about.JPG" class="img-fluid rounded" alt="About Golden Memories Safaris">
+                </div>
+                <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About Us</small>
+                    <h1 class="display-5 mb-4">Trusted By 500+ Satisfied Travelers</h1>
+                    <p class="mb-4">Golden Memories Safaris is a premier tour operator based in Tanzania, specializing in creating unforgettable wildlife experiences. Our team of expert guides and travel consultants are dedicated to providing authentic safari adventures that showcase Tanzania's breathtaking landscapes and incredible wildlife.</p>
+                    <div class="row g-4 text-dark mb-5">
+                        <div class="col-sm-6">
+                            <i class="fas fa-share text-primary me-2"></i>Customized Safari Itineraries
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fas fa-share text-primary me-2"></i>24/7 Customer Support
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fas fa-share text-primary me-2"></i>Expert Local Guides
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fas fa-share text-primary me-2"></i>Luxury & Budget Options
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary py-3 px-5 rounded-pill">Our Story<i class="fas fa-arrow-right ps-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start-->
+    <div class="container-fluid faqt py-6">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                   <div class="row g-4">
+                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
+                            <div class="faqt-item bg-primary rounded p-4 text-center">
+                                <i class="fas fa-users fa-4x mb-4 text-white"></i>
+                                <h1 class="display-4 fw-bold" data-toggle="counter-up">500</h1>
+                                <p class="text-dark text-uppercase fw-bold mb-0">Happy Travelers</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">
+                            <div class="faqt-item bg-primary rounded p-4 text-center">
+                                <i class="fas fa-map-marked-alt fa-4x mb-4 text-white"></i>
+                                <h1 class="display-4 fw-bold" data-toggle="counter-up">15</h1>
+                                <p class="text-dark text-uppercase fw-bold mb-0">National Parks</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.7s">
+                            <div class="faqt-item bg-primary rounded p-4 text-center">
+                                <i class="fas fa-check fa-4x mb-4 text-white"></i>
+                                <h1 class="display-4 fw-bold" data-toggle="counter-up">253</h1>
+                                <p class="text-dark text-uppercase fw-bold mb-0">Safaris Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                    <!-- Video button -->
+
+<div class="video">
+    <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/2UYle8RwhR0" data-bs-target="#videoModal">
+      <span></span>
+    </button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width="100%" height="500" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Video (Duplicate removed for clarity) -->
+        <!-- Fact End -->
+
+<!-- Safari Packages Start -->
+
+<div class="container-fluid safari-packages py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Safaris</small>
+            <h1 class="display-5 mb-5">Popular Tanzania Safari Tours</h1>
+        </div>
+        <div class="row g-4">
+            <!-- Serengeti Great Migration Safari -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+                <div class="safari-card rounded overflow-hidden">
+                    <div class="safari-img position-relative">
+                        <img src="img/home-greatmigration.jpg" class="img-fluid w-100" alt="Great Migration Safari">
+                        <div class="safari-days badge bg-primary">5 Days</div>
+                        <!-- <div class="safari-price badge bg-warning text-dark">From $2,800</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h4 class="mb-3">Great Migration Safari</h4>
+                        <div class="d-flex mb-3">
+                            <span class="me-3"><i class="fas fa-map-marker-alt text-primary me-2"></i>Serengeti NP</span>
+                            <span><i class="fas fa-calendar-alt text-primary me-2"></i>Dec-Jul</span>
+                        </div>
+                        <p class="mb-4">Witness millions of wildebeest and zebras crossing the plains. Includes visits to Seronera Valley and Grumeti River.</p>
+                        <div class="safari-features mb-4">
+                            <h6 class="mb-2">Highlights:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>River crossing viewing</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Balloon safari option</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Luxury tented camps</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                            <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Kilimanjaro Trek -->
+        <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.3s">
+            <div class="safari-card rounded overflow-hidden">
+                <div class="safari-img position-relative">
+                    <img src="img/home-pac2.jpg" class="img-fluid w-100" alt="Kilimanjaro Trek">
+                    <div class="safari-days badge bg-primary">7 Days</div>
+                    <!-- <div class="safari-price badge bg-warning text-dark">From $3,200</div> -->
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-3">Kilimanjaro Machame Route</h4>
+                    <div class="d-flex mb-3">
+                        <span class="me-3"><i class="fas fa-mountain text-primary me-2"></i>Machame Route</span>
+                        <span><i class="fas fa-calendar-alt text-primary me-2"></i>Jun-Oct</span>
+                    </div>
+                    <p class="mb-4">Conquer Africa's highest peak (5,895m) via the scenic Machame route with our expert mountain guides.</p>
+                    <div class="safari-features mb-4">
+                        <h6 class="mb-2">Includes:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>All park fees</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Professional guides & porters</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Quality camping equipment</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                        <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ngorongoro & Tarangire -->
+        <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+            <div class="safari-card rounded overflow-hidden">
+                <div class="safari-img position-relative">
+                    <img src="img/home-t&n.jpg" class="img-fluid w-100" alt="Ngorongoro Crater">
+                    <div class="safari-days badge bg-primary">4 Days</div>
+                    <!-- <div class="safari-price badge bg-warning text-dark">From $1,950</div> -->
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-3">Ngorongoro & Tarangire</h4>
+                    <div class="d-flex mb-3">
+                        <span class="me-3"><i class="fas fa-map-marked-alt text-primary me-2"></i>Northern Circuit</span>
+                        <span><i class="fas fa-calendar-alt text-primary me-2"></i>Year-round</span>
+                    </div>
+                    <p class="mb-4">Explore the wildlife-rich Ngorongoro Crater and Tarangire's elephant herds in this compact safari.</p>
+                    <div class="safari-features mb-4">
+                        <h6 class="mb-2">Features:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Big Five viewing</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Lodge accommodation</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Professional safari guide</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                        <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zanzibar Beach Extension -->
+        <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+            <div class="safari-card rounded overflow-hidden">
+                <div class="safari-img position-relative">
+                    <img src="img/home-pac4.jpg" class="img-fluid w-100" alt="Zanzibar Beach">
+                    <div class="safari-days badge bg-primary">5 Days</div>
+                    <!-- <div class="safari-price badge bg-warning text-dark">From $1,200</div> -->
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-3">Zanzibar Beach Retreat</h4>
+                    <div class="d-flex mb-3">
+                        <span class="me-3"><i class="fas fa-umbrella-beach text-primary me-2"></i>Nungwi Beach</span>
+                        <span><i class="fas fa-calendar-alt text-primary me-2"></i>Year-round</span>
+                    </div>
+                    <p class="mb-4">Relax on pristine white sand beaches after your safari adventure. Includes Stone Town tour.</p>
+                    <div class="safari-features mb-4">
+                        <h6 class="mb-2">Includes:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Beachfront resort</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Spice tour</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Snorkeling trip</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                        <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Luxury Safari -->
+        <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.3s">
+            <div class="safari-card rounded overflow-hidden">
+                <div class="safari-img position-relative">
+                    <img src="img/home-luxury.jpg" class="img-fluid w-100" alt="Luxury Safari">
+                    <div class="safari-days badge bg-primary">8 Days</div>
+                    <!-- <div class="safari-price badge bg-warning text-dark">From $6,500</div> -->
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-3">Ultimate Luxury Safari</h4>
+                    <div class="d-flex mb-3">
+                        <span class="me-3"><i class="fas fa-gem text-primary me-2"></i>Serengeti & Ngorongoro</span>
+                        <span><i class="fas fa-calendar-alt text-primary me-2"></i>Year-round</span>
+                    </div>
+                    <p class="mb-4">Experience Tanzania's wildlife in ultimate comfort at award-winning luxury lodges and camps.</p>
+                    <div class="safari-features mb-4">
+                        <h6 class="mb-2">Luxury Features:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Private game drives</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Hot air balloon safari</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>5-star accommodations</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                        <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Family Safari -->
+        <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+            <div class="safari-card rounded overflow-hidden">
+                <div class="safari-img position-relative">
+                    <img src="img/home-family.jpg" class="img-fluid w-100" alt="Family Safari">
+                    <div class="safari-days badge bg-primary">6 Days</div>
+                    <!-- <div class="safari-price badge bg-warning text-dark">From $3,800</div> -->
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-3">Family Adventure Safari</h4>
+                    <div class="d-flex mb-3">
+                        <span class="me-3"><i class="fas fa-child text-primary me-2"></i>Family-friendly</span>
+                        <span><i class="fas fa-calendar-alt text-primary me-2"></i>Jun-Oct, Dec-Feb</span>
+                    </div>
+                    <p class="mb-4">Specially designed for families with children, featuring child-friendly lodges and activities.</p>
+                    <div class="safari-features mb-4">
+                        <h6 class="mb-2">Family Features:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Child-friendly guides</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Educational activities</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Family accommodations</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Book Now</a>
+                        <a href="#" class="text-primary">Details <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="safaris.html" class="btn btn-outline-primary py-3 px-5 rounded-pill">View All Safari Packages</a>
+    </div>
+</div>
+
+</div>
+<!-- Safari Packages End -->
+
+<!-- ======================= REDESIGNED SERVICES SECTION START (V5.1 - Single Row) ========================== -->
+<!-- Service Start -->
+<div class="container-fluid service py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Services</small>
+            <h1 class="display-5 mb-5">Tailored Adventures For Every Explorer</h1>
+        </div>
+        <!-- NOTE: Grid classes changed to col-lg-2 col-md-4 col-sm-6 col-12 -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Service 1: Tailored Safaris -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.1s">
+                <a href="tailoredsafaris.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                        <div class="service-icon-v5">
+                            <i class="fa fa-route"></i>
+                        </div>
+                        <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Tailored Safaris</h4>
+                            <p class="mb-0">Craft your dream adventure with personalized itineraries matching your interests.</p>
+                            <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Service 2: Luxury Safaris -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.2s">
+                 <a href="luxurysafari.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                         <div class="service-icon-v5">
+                            <i class="fa fa-gem"></i>
+                        </div>
+                        <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Luxury Safaris</h4>
+                            <p class="mb-0">Experience Tanzania in ultimate comfort with exclusive lodges and premium service.</p>
+                             <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Service 3: Mountain Trekking -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.3s">
+                 <a href="mountaintrekking.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                         <div class="service-icon-v5">
+                            <i class="fa fa-mountain"></i>
+                        </div>
+                         <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Mountain Trekking</h4>
+                            <p class="mb-0">Conquer Kilimanjaro or Meru with our experienced guides and safety focus.</p>
+                             <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                 </a>
+            </div>
+
+            <!-- Service 4: Group Safaris -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.4s">
+                <a href="groupsafaris.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                        <div class="service-icon-v5">
+                            <i class="fa fa-users"></i>
+                        </div>
+                         <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Group Safaris</h4>
+                            <p class="mb-0">Join scheduled departures for an affordable and social safari experience.</p>
+                             <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Service 5: Zanzibar Holidays -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.5s">
+                 <a href="zanzibarbeachholiday.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                         <div class="service-icon-v5">
+                           <i class="fa fa-umbrella-beach"></i>
+                        </div>
+                         <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Zanzibar Holidays</h4>
+                            <p class="mb-0">Relax on pristine beaches, explore Stone Town, or dive into turquoise waters.</p>
+                             <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Service 6: Budget Safaris -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 wow bounceInUp" data-wow-delay="0.6s">
+                <a href="budgetsafari.html" class="service-link-v5">
+                    <div class="service-card-v5">
+                        <div class="service-icon-v5">
+                            <i class="fa fa-campground"></i>
+                        </div>
+                        <div class="service-text-v5 d-flex flex-column h-100">
+                            <h4>Budget Safaris</h4>
+                            <p class="mb-0">Explore Tanzania's wonders affordably with quality camping and basic lodges.</p>
+                            <span class="learn-more mt-auto">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+<!-- ======================= REDESIGNED SERVICES SECTION END (V5.1 - Single Row) ========================== -->
+
+<!-- ======================= REDESIGNED DESTINATIONS START (V2) ========================== -->
+<div class="container-fluid destinations py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Destinations</small>
+            <h1 class="display-5 mb-5">Explore Tanzania's Wonders</h1> <!-- Updated Title -->
+        </div>
+        <div class="row g-4">
+
+            <!-- Serengeti Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+                <a href="serengeti.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-serengeti.jpg" class="card-img" alt="Serengeti National Park">
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Serengeti</h4>
+                        <span class="card-subtitle">The Endless Plains & Great Migration</span>
+                    </div>
+                    <div class="card-hover-overlay">
+                        <p class="hover-text">Witness the vast plains and the incredible Great Migration.</p>
+                        <span class="btn btn-explore">Explore Details</span> <!-- Changed button to span for styling within link -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ngorongoro Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.2s">
+                 <a href="ngorongoro.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-ngorongoro.jpg" class="card-img" alt="Ngorongoro Crater">
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Ngorongoro</h4>
+                         <span class="card-subtitle">Wildlife Haven in a Caldera</span>
+                    </div>
+                    <div class="card-hover-overlay">
+                        <p class="hover-text">Descend into the world's largest intact caldera, teeming with wildlife.</p>
+                        <span class="btn btn-explore">Explore Details</span>
+                    </div>
+                 </a>
+            </div>
+
+            <!-- Tarangire Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.3s">
+                 <a href="tarangire.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-tarangire.jpg" class="card-img" alt="Tarangire National Park">
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Tarangire</h4>
+                        <span class="card-subtitle">Land of Elephants & Baobabs</span>
+                    </div>
+                     <div class="card-hover-overlay">
+                        <p class="hover-text">Marvel at huge elephant herds and ancient, giant baobab trees.</p>
+                        <span class="btn btn-explore">Explore Details</span>
+                    </div>
+                </a>
+            </div>
+
+             <!-- Lake Manyara Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.4s">
+                 <a href="manyara.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-manyara.jpg" class="card-img" alt="Lake Manyara National Park"> <!-- CHANGE IMAGE -->
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Lake Manyara</h4>
+                         <span class="card-subtitle">Tree-Climbing Lions & Rift Valley Views</span>
+                    </div>
+                    <div class="card-hover-overlay">
+                        <p class="hover-text">Discover diverse habitats, flamingos, and perhaps lions lounging in trees.</p>
+                        <span class="btn btn-explore">Explore Details</span>
+                    </div>
+                </a>
+            </div>
+
+             <!-- Kilimanjaro Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                 <a href="mtkilimanjaro.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-kilimanjaro.jpg" class="card-img" alt="Mount Kilimanjaro"> <!-- CHANGE IMAGE -->
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Kilimanjaro</h4>
+                        <span class="card-subtitle">Climb the Roof of Africa</span>
+                    </div>
+                    <div class="card-hover-overlay">
+                        <p class="hover-text">Embark on the challenge of summiting Africa's highest peak.</p>
+                        <span class="btn btn-explore">Explore Details</span>
+                    </div>
+                 </a>
+            </div>
+
+             <!-- Zanzibar Card -->
+            <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.6s">
+                 <a href="ZanzibarArchipelago.html" class="destination-card-v2"> <!-- Link added -->
+                    <div class="card-img-wrapper">
+                        <img src="img/home-zanzibar.jpg" class="card-img" alt="Zanzibar Beach"> <!-- CHANGE IMAGE -->
+                    </div>
+                    <div class="card-title-overlay">
+                        <h4 class="card-title">Zanzibar</h4>
+                         <span class="card-subtitle">Spice Island Paradise</span>
+                    </div>
+                    <div class="card-hover-overlay">
+                        <p class="hover-text">Relax on pristine beaches, explore Stone Town, and savor island life.</p>
+                        <span class="btn btn-explore">Explore Details</span>
+                    </div>
+                 </a>
+            </div>
+            <!-- Add more destination cards here using the same structure -->
+
+        </div>
+        <!-- View All Button (optional, if you have a dedicated destinations page) -->
+        <div class="text-center mt-5">
+            <a href="destinations.html" class="btn btn-outline-primary py-3 px-5 rounded-pill">View All Destinations</a>
+        </div>
+    </div>
+</div>
+<!-- ======================= REDESIGNED DESTINATIONS END (V2) ========================== -->
+
+<!-- Book Us Start -->
+    <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-1">
+                    <img src="img/home-booking.jpg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+                <div class="col-10">
+                    <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                        <div class="text-center">
+                            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Plan Your Safari</small>
+                            <h1 class="display-5 mb-5">Customize Your Tanzania Adventure</h1>
+                        </div>
+                        <div class="row g-4 form">
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Select Safari Type</option>
+                                    <option value="1">Wildlife Safari</option>
+                                    <option value="2">Beach Holiday</option>
+                                    <option value="3">Kilimanjaro Trek</option>
+                                    <option value="4">Cultural Tour</option>
+                                    <option value="5">Honeymoon Package</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Select Duration</option>
+                                    <option value="1">3-5 Days</option>
+                                    <option value="2">6-8 Days</option>
+                                    <option value="3">9-12 Days</option>
+                                    <option value="4">13+ Days</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Travel Month</option>
+                                    <option value="1">January - March</option>
+                                    <option value="2">April - June</option>
+                                    <option value="3">July - September</option>
+                                    <option value="4">October - December</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Accommodation Level</option>
+                                    <option value="1">Budget Camping</option>
+                                    <option value="2">Mid-Range Lodges</option>
+                                    <option value="3">Luxury Tented Camps</option>
+                                    <option value="4">5-Star Lodges</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select class="form-select border-primary p-2" aria-label="Default select example">
+                                    <option selected>Number of Travelers</option>
+                                    <option value="1">1-2 People</option>
+                                    <option value="2">3-4 People</option>
+                                    <option value="3">5-6 People</option>
+                                    <option value="4">7+ People</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="text" class="form-control border-primary p-2" placeholder="Your Name">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="email" class="form-control border-primary p-2" placeholder="Your Email">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="tel" class="form-control border-primary p-2" placeholder="Phone Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="text" class="form-control border-primary p-2" placeholder="Country">
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Get Safari Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="img/home-booking.jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Book Us End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonials</small>
+                <h1 class="display-5 mb-5">What Our Travelers Say</h1>
+            </div>
+            <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <img src="img/Erlend G.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="Traveler">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                            <i class="fa fa-quote-right fa-2x"></i>
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">Erlend G</h4>
+                            <p class="m-0">USA</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="d-flex">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="fs-5 m-0 pt-3">We went on a 4 day safari on the Seregeti and Ngorongoro conservation area, January 2025. Fantastic trip and excellent service! The locally owned Golden Memories give top guiding and premium hospitality. </p>
+                    </div>
+                </div>
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <img src="img/misssunshine.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="Traveler">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                            <i class="fa fa-quote-right fa-2x"></i>
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">Miss Sunshine</h4>
+                            <p class="m-0">Germany</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="d-flex">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="fs-5 m-0 pt-3">I had two wonderful days with the team of goldenmemories.
+                            Henry is so kind and respectful.
+                            It was my birthday and I was even surprised with a cake. I felt very comfortable and can only say that I will keep golden memories of this trip! Henry thank you very much!!! If I could I would give 10 stars!</p>
+                    </div>
+                </div>
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <img src="img/Monika U.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="Traveler">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                            <i class="fa fa-quote-right fa-2x"></i>
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">Monika U</h4>
+                            <p class="m-0">Italy</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="d-flex">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="fs-5 m-0 pt-3">Great hospitality, excellent guides with a lot of stories to tell. Everything was top ranked, they took really good care of us as their clients, they listened to all our requests and made them into life.
+                            We had a lof of food, drinks etc. They were taking care of our mood during trip.
+                            Really recommend this one.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Safari Blog</small>
+                <h1 class="display-5 mb-5">Latest Safari News & Tips</h1>
+            </div>
+            <div class="row gx-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden rounded">
+                            <img src="img/home-blog-1.jpg" class="img-fluid w-100" alt="Great Migration">
+                        </div>
+                        <div class="blog-content mx-4 d-flex rounded bg-light">
+                            <div class="text-dark bg-primary rounded-start">
+                                <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                    <p class="fw-bold mb-0">15</p>
+                                    <p class="fw-bold mb-0">Jun</p>
+                                </div>
+                            </div>
+                            <a href="blog-detail-migration.html" class="h5 lh-base my-auto h-100 p-3">Best Time to See the Great Migration in Serengeti</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden rounded">
+                            <img src="img/home-blog-2.jpg" class="img-fluid w-100" alt="Kilimanjaro">
+                        </div>
+                        <div class="blog-content mx-4 d-flex rounded bg-light">
+                            <div class="text-dark bg-primary rounded-start">
+                                <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                    <p class="fw-bold mb-0">02</p>
+                                    <p class="fw-bold mb-0">Jul</p>
+                                </div>
+                            </div>
+                            <a href="blog-detail-kilimanjaro-prep.html" class="h5 lh-base my-auto h-100 p-3">Preparing for Your Kilimanjaro Trek: Essential Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden rounded">
+                            <img src="img/home-blog-3.jpg" class="img-fluid w-100" alt="Safari Photography">
+                        </div>
+                        <div class="blog-content mx-4 d-flex rounded bg-light">
+                            <div class="text-dark bg-primary rounded-start">
+                                <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                    <p class="fw-bold mb-0">22</p>
+                                    <p class="fw-bold mb-0">Jul</p>
+                                </div>
+                            </div>
+                            <a href="blog-detail-photo-tips.html" class="h5 lh-base my-auto h-100 p-3">Wildlife Photography Tips for Your Safari</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+<div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+
+                      <!-- Column 1: Logo, Contact Info, Social Icons -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a href="/">
+                                <img src="img/logo.png"
+                                     alt="Golden Memories Safaris Logo"
+                                     class="footer-logo mb-4"
+                                     width="180" height="40">
+                              </a>
+                            <!-- Contact Info Moved Here -->
+                            <div class="d-flex flex-column align-items-start mb-4">
+                                <!-- Added mb-1 to each <p> tag below -->
+                                <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i> Arusha, Tanzania</p>
+                                <p class="mb-1"><i class="fa fa-phone-alt text-primary me-2"></i> +255 786 383 273 </p>
+                                <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> info@gmsafaris.co.tz</p>
+                                <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i> Mon-Sun: 8AM - 6PM</p>
+                                <!-- Removed margin from last paragraph to prevent double margin with parent div's mb-4 -->
+                                <!-- If the last p still has too much space below it, you could use mb-0 on it -->
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="tailoredsafaris.html"><i class="fa fa-check text-primary me-2"></i>Tailored Safaris</a>
+                        <a class="text-body mb-2" href="luxurysafari.html"><i class="fa fa-check text-primary me-2"></i>Luxury Safaris</a>
+                        <a class="text-body mb-2" href="mountaintrekking.html"><i class="fa fa-check text-primary me-2"></i>Mountain Trekking</a>
+                        <a class="text-body mb-2" href="groupsafaris.html"><i class="fa fa-check text-primary me-2"></i>Group Safaris</a>
+                        <a class="text-body mb-2" href="ZanzibarArchipelago.html"><i class="fa fa-check text-primary me-2"></i>Zanzibar Holidays</a>
+                        <a class="text-body mb-2" href="budgetsafari.html"><i class="fa fa-check text-primary me-2"></i>Budget Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Useful Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="besttimetovisit.html"><i class="fa fa-check text-primary me-2"></i>Best Time to Visit</a>
+                        <a class="text-body mb-2" href="localcustoms.html"><i class="fa fa-check text-primary me-2"></i>Local Customs & Etiquette</a>
+                        <a class="text-body mb-2" href="healthandsafety.html"><i class="fa fa-check text-primary me-2"></i>Health & Safety Guide</a>
+                        <a class="text-body mb-2" href="visa.html"><i class="fa fa-check text-primary me-2"></i>Visa Information</a>
+                        <a class="text-body mb-2" href="insuarance.html"><i class="fa fa-check text-primary me-2"></i>Insurance & Emergency</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Connect & Review -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Connect & Review</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="https://immigration.go.tz/" target="_blank" rel="noopener noreferrer"><i class="fas fa-passport text-primary me-2"></i>Official eVisa Application</a>
+                        <a class="text-body mb-2" href="https://www.tripadvisor.com/Attraction_Review-g297913-d27751442-Reviews-GOLDEN_MEMORIES_SAFARIS-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen text-primary me-2"></i>Review us on TripAdvisor</a>
+                        <a class="text-body mb-2" href="https://www.getyourguide.com/golden-memories-safaris-s392921/" target="_blank" rel="noopener noreferrer"><i class="fas fa-route text-primary me-2"></i>Find us on GetYourGuide</a>
+                        <a class="text-body mb-2" href="https://immigration.go.tz/index.php/immigration-hq-dodoma" target="_blank" rel="noopener noreferrer"><i class="fas fa-hands-helping text-primary me-2"></i>Contact your Embassy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#" class="text-primary"><i class="fas fa-copyright text-light me-2"></i>Golden Memories Safaris</a>. All Rights Reserved.</span>
+            </div>
+             <div class="col-md-6 my-auto text-center text-md-end text-white">
+                 <a href="privacypolicy.html" class="text-light me-3">Privacy Policy</a>
+                <a href="termsandconditions.html" class="text-light">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        const videoModal = document.getElementById('videoModal');
+        videoModal.addEventListener('show.bs.modal', function (event) {
+          const button = event.relatedTarget;
+          const videoSrc = button.getAttribute('data-src');
+          const iframe = videoModal.querySelector('iframe');
+          iframe.src = videoSrc + "?autoplay=1";
+        });
+
+        videoModal.addEventListener('hidden.bs.modal', function () {
+          const iframe = videoModal.querySelector('iframe');
+          iframe.src = "";
+        });
+      </script>
+</body>
+
+</html>

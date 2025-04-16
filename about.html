@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>About Us - Golden Memories Safaris</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="About Golden Memories Safaris, Tanzania tour operator, local safari company, expert guides, sustainable tourism, Arusha safari company" name="keywords">
+        <meta content="Learn about Golden Memories Safaris, a passionate local Tanzanian tour operator based in Arusha, dedicated to creating authentic, responsible, and unforgettable safari adventures." name="description">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- Corrected path -->
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+             /* Page Header Style */
+            .page-header {
+                /* *** REPLACE 'img/about-hero.jpg' with your actual hero image for this page *** */
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/about-hero.jpg) center center no-repeat;
+                background-size: cover;
+            }
+            /* Why Choose Us Icons */
+            .why-choose-us .icon-box {
+                font-size: 3rem;
+                color: var(--bs-primary);
+                margin-bottom: 1rem;
+                transition: transform 0.3s ease;
+            }
+            .why-choose-us .feature-item:hover .icon-box {
+                 transform: scale(1.1);
+            }
+
+            /* Team Section Styles */
+             .team-item {
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 border: 1px solid #eee;
+                 background-color: #fff; /* Ensure background for shadow */
+                 overflow: hidden; /* Keep content contained */
+             }
+             .team-item:hover {
+                 transform: translateY(-5px);
+                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+             }
+             .team-item img {
+                 height: 300px; /* Fixed height for team images */
+                 width: 100%; /* Ensure full width */
+                 object-fit: cover;
+                 object-position: center; /* Adjust as needed, 'top' might be better for portraits */
+             }
+             .team-content {
+                background: var(--bs-light);
+                padding: 15px; /* Add padding */
+             }
+             .team-icon { display: none; } /* Hiding the complex icon behavior for simplicity on About page */
+
+             /* Footer Logo */
+             .footer-logo {
+               max-width: 100%;
+               height: auto;
+               filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+             }
+
+             /* Ensure consistent section padding */
+             .py-6 {
+                 padding-top: 6rem;
+                 padding-bottom: 6rem;
+             }
+             .bg-light.py-6 { /* Adjust padding slightly for visual rhythm */
+                  padding-top: 5.5rem;
+                  padding-bottom: 5.5rem;
+             }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+       <!-- Navbar start -->
+
+<div class="container-fluid nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Golden Memories Safaris Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="safaris.html" class="nav-item nav-link">Safaris</a>
+                    <a href="destinations.html" class="nav-item nav-link">Destinations</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="blog.html" class="dropdown-item">Travel Blog</a>
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="booking.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+         <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search Golden Memories Safaris</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="Search safaris, destinations, or experiences..." aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">About Golden Memories Safaris</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Our Story Start -->
+        <div class="container-fluid py-6">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow bounceInLeft" data-wow-delay="0.1s">
+                         <!-- *** REPLACE 'img/about-story.jpg' with your actual image *** -->
+                         <img src="img/about-1.jpg" class="img-fluid rounded shadow-lg" alt="Founders or team members of Golden Memories Safaris in Tanzania">
+                    </div>
+                    <div class="col-lg-6 wow bounceInRight" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Story</small>
+                        <h1 class="display-5 mb-4">Karibu! Welcome to Our World</h1>
+                        <p class="mb-3">Golden Memories Safaris isn't just a company; it's a dream realized, rooted in the heart of Tanzania. We are a <strong>100% locally owned and operated</strong> tour company based in Arusha, born from a lifelong passion for the incredible wildlife, diverse cultures, and breathtaking landscapes of our homeland.</p>
+                        <p class="mb-3">Having grown up exploring the vast plains of the Serengeti, listening to the whispers of the Ngorongoro Crater, and understanding the rhythms of the wild, we wanted to share these authentic experiences with the world. Our journey began with a simple goal: to craft personalized, high-quality safaris that create more than just vacations – they create <strong>truly golden, lifelong memories</strong>.</p>
+                        <p class="mb-4">Today, we are proud to be a trusted partner for travelers seeking genuine Tanzanian adventures. We combine our deep local knowledge with international standards of service to ensure your safari is seamless, safe, and simply unforgettable.</p>
+                         <a href="contact.html" class="btn btn-primary py-3 px-5 rounded-pill">Get In Touch<i class="fas fa-arrow-right ps-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Story End -->
+
+        <!-- Mission & Vision Start -->
+        <div class="container-fluid py-6 bg-light">
+             <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-white border border-primary rounded-pill px-4 py-1 mb-3">Our Purpose</small>
+                    <h1 class="display-5 mb-5">Guiding Principles</h1>
+                </div>
+                 <div class="row g-4 justify-content-center">
+                     <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                         <div class="text-center p-4 p-lg-5 shadow rounded h-100 d-flex flex-column justify-content-center bg-white">
+                             <i class="fas fa-bullseye fa-3x text-primary mb-4"></i>
+                             <h3 class="mb-3">Our Mission</h3>
+                             <p class="mb-0">To curate and deliver exceptional, personalized safari experiences that deeply connect our guests with Tanzania's natural wonders and rich culture, while upholding the highest standards of service, safety, and responsible tourism.</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                         <div class="text-center p-4 p-lg-5 shadow rounded h-100 d-flex flex-column justify-content-center bg-white">
+                              <i class="fas fa-binoculars fa-3x text-primary mb-4"></i>
+                              <h3 class="mb-3">Our Vision</h3>
+                             <p class="mb-0">To be Tanzania's most cherished safari operator, renowned for creating authentic "Golden Memories," fostering sustainable tourism, and inspiring a global appreciation for our country's unique heritage.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+        <!-- Mission & Vision End -->
+
+
+        <!-- Why Choose Us Start -->
+        <div class="container-fluid why-choose-us py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Why Choose Us?</small>
+                    <h1 class="display-5 mb-5">The Golden Memories Advantage</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                            <div class="icon-box"><i class="fas fa-users"></i></div>
+                            <h4 class="mb-3">Passionate Local Experts</h4>
+                            <p class="mb-0">Our guides aren't just drivers; they're certified professionals, wildlife enthusiasts, and proud Tanzanians eager to share their knowledge and love for their country.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                             <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+                            <h4 class="mb-3">Tailor-Made Adventures</h4>
+                            <p class="mb-0">Your dream, your safari. We meticulously craft itineraries based on your interests, pace, budget, and travel style – no two trips are exactly alike.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                            <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                            <h4 class="mb-3">Commitment to Sustainability</h4>
+                            <p class="mb-0">We practice responsible tourism, supporting conservation initiatives, respecting local cultures, and minimizing our environmental footprint.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                            <div class="icon-box"><i class="fas fa-car-side"></i></div>
+                            <h4 class="mb-3">Reliable & Comfortable Fleet</h4>
+                            <p class="mb-0">Travel in comfort and safety with our well-maintained 4x4 safari vehicles, equipped with charging ports, refrigerators, and pop-up roofs for optimal viewing.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                            <div class="icon-box"><i class="fas fa-hand-holding-usd"></i></div>
+                            <h4 class="mb-3">Transparent & Fair Pricing</h4>
+                            <p class="mb-0">We offer competitive rates with clear inclusions and exclusions. Experience exceptional value without hidden costs or compromising quality.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item text-center p-4 shadow-sm rounded border h-100">
+                            <div class="icon-box"><i class="fas fa-headset"></i></div>
+                            <h4 class="mb-3">24/7 Dedicated Support</h4>
+                            <p class="mb-0">From your first email until you're safely home, our friendly team is available around the clock to assist you with any queries or needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Why Choose Us End -->
+
+
+        <!-- Team Start -->
+        <div class="container-fluid team py-6 bg-light">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-white border border-primary rounded-pill px-4 py-1 mb-3">Our Team</small>
+                    <h1 class="display-5 mb-5">Meet the Faces Behind Your Safari</h1>
+                    <p class="lead mb-5 mx-auto" style="max-width: 700px;">Our dedicated team is the heart of Golden Memories Safaris. We are a family of passionate professionals committed to making your Tanzanian adventure extraordinary.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member 1 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item rounded">
+                            <!-- *** REPLACE with actual image and details *** -->
+                            <img class="img-fluid rounded-top" src="img/guide-1.jpg" alt="Photo of John Mwita, Lead Guide">
+                            <div class="team-content text-center py-3 rounded-bottom">
+                                <h4 class="text-primary mb-1">John Mwita</h4>
+                                <p class="text-dark fw-bold mb-0">Lead Safari Guide</p>
+                                <small class="text-muted">15+ Years Experience</small>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Team Member 2 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                         <div class="team-item rounded">
+                            <!-- *** REPLACE with actual image and details *** -->
+                            <img class="img-fluid rounded-top" src="img/guide-2.jpg" alt="Photo of Sarah Juma, Wildlife Specialist">
+                            <div class="team-content text-center py-3 rounded-bottom">
+                                <h4 class="text-primary mb-1">Sarah Juma</h4>
+                                <p class="text-dark fw-bold mb-0">Wildlife Specialist & Guide</p>
+                                 <small class="text-muted">Passionate Conservationist</small>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Team Member 3 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                         <div class="team-item rounded">
+                             <!-- *** REPLACE with actual image and details *** -->
+                            <img class="img-fluid rounded-top" src="img/guide-3.jpg" alt="Photo of Michael Kileo, Head Mountain Guide">
+                            <div class="team-content text-center py-3 rounded-bottom">
+                                <h4 class="text-primary mb-1">Michael Kileo</h4>
+                                <p class="text-dark fw-bold mb-0">Head Mountain Guide (Kili)</p>
+                                <small class="text-muted">Summit Success Expert</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                         <div class="team-item rounded">
+                             <!-- *** REPLACE with actual image and details *** -->
+                            <img class="img-fluid rounded-top" src="img/guide-4.jpg" alt="Photo of Grace Mushi, Operations Manager">
+                            <div class="team-content text-center py-3 rounded-bottom">
+                                <h4 class="text-primary mb-1">Grace Mushi</h4>
+                                <p class="text-dark fw-bold mb-0">Operations Manager</p>
+                                 <small class="text-muted">Ensuring Smooth Journeys</small>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Add more team members following the pattern -->
+                     <!-- Example:
+                      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                         <div class="team-item rounded">
+                            <img class="img-fluid rounded-top" src="img/team-member-5.jpg" alt="Photo of [Name]">
+                            <div class="team-content text-center py-3 rounded-bottom">
+                                <h4 class="text-primary mb-1">[Name]</h4>
+                                <p class="text-dark fw-bold mb-0">[Title]</p>
+                                 <small class="text-muted">[Brief Description]</small>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                 <!-- Optional: Link to a dedicated team page if you have many members -->
+                 <!-- <div class="text-center mt-5 wow bounceInUp" data-wow-delay="0.7s">
+                     <a href="team.html" class="btn btn-outline-primary py-2 px-4 rounded-pill">Meet The Entire Team</a>
+                 </div> -->
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Call to Action Start -->
+        <div class="container-fluid py-6 wow fadeInUp" data-wow-delay="0.1s" style="background: var(--bs-primary-light-subtle);"> <!-- Using a light primary background -->
+            <div class="container text-center">
+                 <div class="row justify-content-center">
+                     <div class="col-lg-9">
+                         <i class="fas fa-feather-alt fa-3x text-primary mb-4"></i> <!-- Changed icon -->
+                         <h1 class="mb-4">Ready to Create Your Own Golden Memories?</h1>
+                         <p class="mb-4 fs-5 lh-base">Let our local expertise and passion for Tanzania guide you on an adventure of a lifetime. Whether you dream of the vast Serengeti plains, the heights of Kilimanjaro, or the spice-scented breezes of Zanzibar, we're here to make it happen. Contact us today to start planning!</p>
+                         <a href="booking.html" class="btn btn-primary btn-lg rounded-pill py-3 px-5 mx-2 mb-2 shadow-sm">Start Planning My Safari</a>
+                         <a href="safaris.html" class="btn btn-outline-primary btn-lg rounded-pill py-3 px-5 mx-2 mb-2">Explore Our Tours</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <!-- Call to Action End -->
+
+
+         <!-- Footer Start -->
+<div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+
+                      <!-- Column 1: Logo, Contact Info, Social Icons -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a href="/">
+                                <img src="img/logo.png"
+                                     alt="Golden Memories Safaris Logo"
+                                     class="footer-logo mb-4"
+                                     width="180" height="40">
+                              </a>
+                            <!-- Contact Info Moved Here -->
+                            <div class="d-flex flex-column align-items-start mb-4">
+                                <!-- Added mb-1 to each <p> tag below -->
+                                <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i> Arusha, Tanzania</p>
+                                <p class="mb-1"><i class="fa fa-phone-alt text-primary me-2"></i> +255 786 383 273 </p>
+                                <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> info@gmsafaris.co.tz</p>
+                                <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i> Mon-Sun: 8AM - 6PM</p>
+                                <!-- Removed margin from last paragraph to prevent double margin with parent div's mb-4 -->
+                                <!-- If the last p still has too much space below it, you could use mb-0 on it -->
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="tailoredsafaris.html"><i class="fa fa-check text-primary me-2"></i>Tailored Safaris</a>
+                        <a class="text-body mb-2" href="luxurysafari.html"><i class="fa fa-check text-primary me-2"></i>Luxury Safaris</a>
+                        <a class="text-body mb-2" href="mountaintrekking.html"><i class="fa fa-check text-primary me-2"></i>Mountain Trekking</a>
+                        <a class="text-body mb-2" href="groupsafaris.html"><i class="fa fa-check text-primary me-2"></i>Group Safaris</a>
+                        <a class="text-body mb-2" href="ZanzibarArchipelago.html"><i class="fa fa-check text-primary me-2"></i>Zanzibar Holidays</a>
+                        <a class="text-body mb-2" href="budgetsafari.html"><i class="fa fa-check text-primary me-2"></i>Budget Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Useful Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="besttimetovisit.html"><i class="fa fa-check text-primary me-2"></i>Best Time to Visit</a>
+                        <a class="text-body mb-2" href="localcustoms.html"><i class="fa fa-check text-primary me-2"></i>Local Customs & Etiquette</a>
+                        <a class="text-body mb-2" href="healthandsafety.html"><i class="fa fa-check text-primary me-2"></i>Health & Safety Guide</a>
+                        <a class="text-body mb-2" href="visa.html"><i class="fa fa-check text-primary me-2"></i>Visa Information</a>
+                        <a class="text-body mb-2" href="insuarance.html"><i class="fa fa-check text-primary me-2"></i>Insurance & Emergency</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Connect & Review -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Connect & Review</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="https://immigration.go.tz/" target="_blank" rel="noopener noreferrer"><i class="fas fa-passport text-primary me-2"></i>Official eVisa Application</a>
+                        <a class="text-body mb-2" href="https://www.tripadvisor.com/Attraction_Review-g297913-d27751442-Reviews-GOLDEN_MEMORIES_SAFARIS-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen text-primary me-2"></i>Review us on TripAdvisor</a>
+                        <a class="text-body mb-2" href="https://www.getyourguide.com/golden-memories-safaris-s392921/" target="_blank" rel="noopener noreferrer"><i class="fas fa-route text-primary me-2"></i>Find us on GetYourGuide</a>
+                        <a class="text-body mb-2" href="https://immigration.go.tz/index.php/immigration-hq-dodoma" target="_blank" rel="noopener noreferrer"><i class="fas fa-hands-helping text-primary me-2"></i>Contact your Embassy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#" class="text-primary"><i class="fas fa-copyright text-light me-2"></i>Golden Memories Safaris</a>. All Rights Reserved.</span>
+            </div>
+             <div class="col-md-6 my-auto text-center text-md-end text-white">
+                 <a href="privacypolicy.html" class="text-light me-3">Privacy Policy</a>
+                <a href="termsandconditions.html" class="text-light">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script> <!-- Keep even if not used on this page directly -->
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script> <!-- Keep even if not used on this page directly -->
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+         <script>
+            $(document).ready(function(){
+                // Lightbox Initialization (for footer gallery)
+                 lightbox.option({
+                  'resizeDuration': 200,
+                  'wrapAround': true
+                });
+
+                // WOW Initialization
+                new WOW().init();
+
+                // Optional: Add specific JS for this page if needed
+            });
+         </script>
+
+    </body>
+
+</html>

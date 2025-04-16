@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Our Safaris - Golden Memories Safaris</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Tanzania safari packages, Serengeti safari tours, Kilimanjaro climbs, Zanzibar holidays, luxury safari Tanzania, budget safari Tanzania, family safari" name="keywords">
+        <meta content="Explore diverse Tanzania safari packages with Golden Memories Safaris. From thrilling wildlife adventures and Kilimanjaro treks to relaxing Zanzibar escapes, find your perfect journey." name="description">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+             /* Page Header Style */
+            .page-header {
+                /* *** REPLACE 'img/safaris-hero.jpg' with your actual hero image *** */
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/safaris-hero.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            /* Safari Package Card Styling */
+            .safari-package-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid #eee;
+                overflow: hidden; /* Ensure image zoom doesn't break layout */
+            }
+            .safari-package-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .safari-package-card .card-img-top {
+                height: 250px; /* Or adjust as needed */
+                object-fit: cover;
+                 transition: transform 0.4s ease;
+            }
+             .safari-package-card:hover .card-img-top {
+                transform: scale(1.05);
+             }
+             .safari-package-card .card-body {
+                 display: flex;
+                 flex-direction: column;
+             }
+             .safari-package-card .card-title a {
+                 color: var(--bs-dark);
+                 text-decoration: none;
+                 transition: color 0.3s ease;
+             }
+             .safari-package-card .card-title a:hover {
+                 color: var(--bs-primary);
+             }
+             .safari-meta span {
+                 margin-right: 15px;
+                 font-size: 0.9em;
+                 color: #6c757d;
+             }
+             .safari-meta i {
+                 color: var(--bs-primary);
+                 margin-right: 5px;
+             }
+             .safari-highlights ul {
+                 list-style: none;
+                 padding-left: 0;
+                 font-size: 0.9em;
+                 margin-bottom: 1rem;
+             }
+             .safari-highlights li {
+                 margin-bottom: 0.4rem;
+                 color: #495057;
+             }
+             .safari-highlights li i {
+                 color: var(--bs-primary);
+                 margin-right: 8px;
+             }
+             .safari-package-card .card-text {
+                 flex-grow: 1; /* Push buttons down */
+             }
+             .safari-buttons {
+                 margin-top: auto; /* Push buttons to bottom */
+             }
+
+             /* Footer Logo */
+             .footer-logo {
+               max-width: 100%;
+               height: auto;
+               filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+             }
+             /* Consistent section padding */
+             .py-6 {
+                 padding-top: 6rem;
+                 padding-bottom: 6rem;
+             }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+           <!-- Navbar start -->
+
+<div class="container-fluid nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Golden Memories Safaris Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="safaris.html" class="nav-item nav-link">Safaris</a>
+                    <a href="destinations.html" class="nav-item nav-link">Destinations</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="blog.html" class="dropdown-item">Travel Blog</a>
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="booking.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+         <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search Golden Memories Safaris</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="Search safaris, destinations..." aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Our Safari Packages</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Safaris</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Safaris Intro Start -->
+        <div class="container-fluid bg-light py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                 <div class="text-center">
+                    <h2 class="mb-3">Discover Your Perfect Tanzanian Adventure</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                        Golden Memories Safaris offers a diverse range of experiences tailored to different interests and travel styles. Whether you dream of witnessing the Great Migration, conquering Kilimanjaro, relaxing on Zanzibar's beaches, or enjoying a luxurious escape, we have a package for you. Explore our popular itineraries below or contact us to create a fully customized journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Safaris Intro End -->
+
+
+        <!-- Safaris List Start -->
+        <div class="container-fluid py-6">
+            <div class="container">
+                 <div class="row g-4 justify-content-center">
+
+                    <!-- Safari Package 1: Great Migration -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="safari-package-card card h-100 shadow-sm">
+                            <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-migration.jpg" class="card-img-top safari-image" alt="Wildebeest Migration crossing river">
+                             <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">5 Days</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                    <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=great-migration">Great Migration Safari</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-map-marker-alt"></i> Serengeti NP</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Best Dec-Jul</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                     <!-- *** REPLACE DESCRIPTION *** -->
+                                    Witness the awe-inspiring spectacle of millions of wildebeest and zebras traversing the Serengeti plains.
+                                </p>
+                                <div class="safari-highlights">
+                                    <h6>Highlights:</h6>
+                                    <ul>
+                                        <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> Prime Migration Viewing</li>
+                                        <li><i class="fas fa-check"></i> Big Five Opportunities</li>
+                                        <li><i class="fas fa-check"></i> Optional Balloon Safari</li>
+                                    </ul>
+                                </div>
+                                <div class="safari-buttons d-flex justify-content-between">
+                                    <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=great-migration" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=migration" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Safari Package 2: Kilimanjaro Trek -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="safari-package-card card h-100 shadow-sm">
+                            <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-kilimanjaro.jpg" class="card-img-top safari-image" alt="Hikers approaching Kilimanjaro summit">
+                             <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">7 Days (Machame)</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                    <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=kilimanjaro-machame">Kilimanjaro Machame Trek</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-mountain"></i> Machame Route</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Jun-Oct, Dec-Feb</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                     <!-- *** REPLACE DESCRIPTION *** -->
+                                    Conquer the "Roof of Africa" via the scenic and popular Machame route with our expert mountain crew.
+                                </p>
+                                <div class="safari-highlights">
+                                    <h6>Highlights:</h6>
+                                    <ul>
+                                         <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> High Summit Success Rate</li>
+                                        <li><i class="fas fa-check"></i> Stunning Scenery</li>
+                                        <li><i class="fas fa-check"></i> Professional Guides & Porters</li>
+                                    </ul>
+                                </div>
+                                 <div class="safari-buttons d-flex justify-content-between">
+                                    <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=kilimanjaro-machame" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=kilimanjaro" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safari Package 3: Classic Northern Circuit -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="safari-package-card card h-100 shadow-sm">
+                            <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-northern.jpg" class="card-img-top safari-image" alt="Safari vehicle in Ngorongoro Crater">
+                            <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">6 Days</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                     <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=northern-classic">Classic Northern Circuit</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-map-marker-alt"></i> Manyara, Serengeti, Ngorongoro</span>
+                                     <span><i class="fas fa-calendar-alt"></i> Year-round</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                     <!-- *** REPLACE DESCRIPTION *** -->
+                                    Experience the highlights of Tanzania's famed northern parks, offering incredible wildlife density and diversity.
+                                </p>
+                                <div class="safari-highlights">
+                                     <h6>Highlights:</h6>
+                                    <ul>
+                                         <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> Big Five Potential</li>
+                                        <li><i class="fas fa-check"></i> Ngorongoro Crater Descent</li>
+                                        <li><i class="fas fa-check"></i> Diverse Landscapes</li>
+                                    </ul>
+                                </div>
+                                <div class="safari-buttons d-flex justify-content-between">
+                                    <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=northern-classic" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=northern-classic" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Safari Package 4: Luxury Safari -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"> <!-- Reset delay -->
+                        <div class="safari-package-card card h-100 shadow-sm">
+                            <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-luxury.jpg" class="card-img-top safari-image" alt="Luxury tented camp interior">
+                            <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">8 Days</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                     <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=luxury-safari">Ultimate Luxury Safari</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-map-marker-alt"></i> Serengeti & Ngorongoro Focus</span>
+                                    <span><i class="fas fa-gem"></i> Premium Lodges</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                     <!-- *** REPLACE DESCRIPTION *** -->
+                                    Indulge in unparalleled comfort and exclusivity while experiencing Tanzania's wildlife wonders.
+                                </p>
+                                <div class="safari-highlights">
+                                     <h6>Highlights:</h6>
+                                    <ul>
+                                        <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> Exquisite Accommodations</li>
+                                        <li><i class="fas fa-check"></i> Private Game Drives Possible</li>
+                                        <li><i class="fas fa-check"></i> Gourmet Dining & Top Service</li>
+                                    </ul>
+                                </div>
+                                <div class="safari-buttons d-flex justify-content-between">
+                                     <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=luxury-safari" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=luxury-safari" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Safari Package 5: Family Adventure -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="safari-package-card card h-100 shadow-sm">
+                             <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-family.jpg" class="card-img-top safari-image" alt="Family watching giraffe on safari">
+                            <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">7 Days</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                    <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=family-adventure">Tanzania Family Adventure</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-map-marker-alt"></i> Tarangire, Ngorongoro, Central Serengeti</span>
+                                    <span><i class="fas fa-child"></i> Family Friendly</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                     <!-- *** REPLACE DESCRIPTION *** -->
+                                    Create lifelong memories with a safari designed for all ages, featuring engaging activities and family-friendly lodges.
+                                </p>
+                                <div class="safari-highlights">
+                                    <h6>Highlights:</h6>
+                                    <ul>
+                                        <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> Child-Friendly Guides</li>
+                                        <li><i class="fas fa-check"></i> Interactive Learning</li>
+                                        <li><i class="fas fa-check"></i> Flexible Pacing</li>
+                                    </ul>
+                                </div>
+                                <div class="safari-buttons d-flex justify-content-between">
+                                     <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=family-adventure" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=family-adventure" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Safari Package 6: Zanzibar Beach Escape -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="safari-package-card card h-100 shadow-sm">
+                             <!-- *** REPLACE IMAGE *** -->
+                            <img src="img/safari-zanzibar.jpg" class="card-img-top safari-image" alt="White sand beach and dhow boat in Zanzibar">
+                            <div class="badge bg-primary position-absolute top-0 start-0 m-3 py-2 px-3">5 Days</div>
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">
+                                    <!-- *** REPLACE LINK & TITLE *** -->
+                                    <a href="safari-detail.html?id=zanzibar-escape">Zanzibar Beach Escape</a>
+                                </h4>
+                                <div class="safari-meta mb-3">
+                                    <span><i class="fas fa-umbrella-beach"></i> Zanzibar Island</span>
+                                     <span><i class="fas fa-calendar-alt"></i> Year-round</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">
+                                    <!-- *** REPLACE DESCRIPTION *** -->
+                                    Relax and unwind on pristine beaches, explore historic Stone Town, and soak up the island's unique culture and spice history.
+                                </p>
+                                <div class="safari-highlights">
+                                     <h6>Highlights:</h6>
+                                    <ul>
+                                         <!-- *** REPLACE HIGHLIGHTS *** -->
+                                        <li><i class="fas fa-check"></i> Beautiful Beach Resorts</li>
+                                        <li><i class="fas fa-check"></i> Stone Town Tour</li>
+                                        <li><i class="fas fa-check"></i> Spice Farm Visit</li>
+                                    </ul>
+                                </div>
+                                <div class="safari-buttons d-flex justify-content-between">
+                                    <!-- *** REPLACE LINKS *** -->
+                                    <a href="safari-detail.html?id=zanzibar-escape" class="btn btn-outline-primary btn-sm px-3">View Details</a>
+                                    <a href="booking.html?package=zanzibar-escape" class="btn btn-primary btn-sm px-3">Inquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Add More Safari Packages as needed -->
+
+                 </div> <!-- End row -->
+
+                 <!-- Call to Action for Custom Safaris -->
+                 <div class="text-center pt-5 mt-4 wow fadeInUp" data-wow-delay="0.4s">
+                      <h3 class="mb-3">Don't See Exactly What You're Looking For?</h3>
+                      <p class="lead text-muted mb-4">We specialize in tailor-made adventures! Contact us to design your unique Tanzanian journey.</p>
+                      <a href="contact.html" class="btn btn-primary rounded-pill px-5 py-3">Design My Custom Safari</a>
+                 </div>
+
+            </div>
+        </div>
+        <!-- Safaris List End -->
+
+
+        <!-- Footer Start -->
+<div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+
+                      <!-- Column 1: Logo, Contact Info, Social Icons -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a href="/">
+                                <img src="img/logo.png"
+                                     alt="Golden Memories Safaris Logo"
+                                     class="footer-logo mb-4"
+                                     width="180" height="40">
+                              </a>
+                            <!-- Contact Info Moved Here -->
+                            <div class="d-flex flex-column align-items-start mb-4">
+                                <!-- Added mb-1 to each <p> tag below -->
+                                <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i> Arusha, Tanzania</p>
+                                <p class="mb-1"><i class="fa fa-phone-alt text-primary me-2"></i> +255 786 383 273 </p>
+                                <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> info@gmsafaris.co.tz</p>
+                                <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i> Mon-Sun: 8AM - 6PM</p>
+                                <!-- Removed margin from last paragraph to prevent double margin with parent div's mb-4 -->
+                                <!-- If the last p still has too much space below it, you could use mb-0 on it -->
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="tailoredsafaris.html"><i class="fa fa-check text-primary me-2"></i>Tailored Safaris</a>
+                        <a class="text-body mb-2" href="luxurysafari.html"><i class="fa fa-check text-primary me-2"></i>Luxury Safaris</a>
+                        <a class="text-body mb-2" href="mountaintrekking.html"><i class="fa fa-check text-primary me-2"></i>Mountain Trekking</a>
+                        <a class="text-body mb-2" href="groupsafaris.html"><i class="fa fa-check text-primary me-2"></i>Group Safaris</a>
+                        <a class="text-body mb-2" href="ZanzibarArchipelago.html"><i class="fa fa-check text-primary me-2"></i>Zanzibar Holidays</a>
+                        <a class="text-body mb-2" href="budgetsafari.html"><i class="fa fa-check text-primary me-2"></i>Budget Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Useful Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="besttimetovisit.html"><i class="fa fa-check text-primary me-2"></i>Best Time to Visit</a>
+                        <a class="text-body mb-2" href="localcustoms.html"><i class="fa fa-check text-primary me-2"></i>Local Customs & Etiquette</a>
+                        <a class="text-body mb-2" href="healthandsafety.html"><i class="fa fa-check text-primary me-2"></i>Health & Safety Guide</a>
+                        <a class="text-body mb-2" href="visa.html"><i class="fa fa-check text-primary me-2"></i>Visa Information</a>
+                        <a class="text-body mb-2" href="insuarance.html"><i class="fa fa-check text-primary me-2"></i>Insurance & Emergency</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Connect & Review -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Connect & Review</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="https://immigration.go.tz/" target="_blank" rel="noopener noreferrer"><i class="fas fa-passport text-primary me-2"></i>Official eVisa Application</a>
+                        <a class="text-body mb-2" href="https://www.tripadvisor.com/Attraction_Review-g297913-d27751442-Reviews-GOLDEN_MEMORIES_SAFARIS-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen text-primary me-2"></i>Review us on TripAdvisor</a>
+                        <a class="text-body mb-2" href="https://www.getyourguide.com/golden-memories-safaris-s392921/" target="_blank" rel="noopener noreferrer"><i class="fas fa-route text-primary me-2"></i>Find us on GetYourGuide</a>
+                        <a class="text-body mb-2" href="https://immigration.go.tz/index.php/immigration-hq-dodoma" target="_blank" rel="noopener noreferrer"><i class="fas fa-hands-helping text-primary me-2"></i>Contact your Embassy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#" class="text-primary"><i class="fas fa-copyright text-light me-2"></i>Golden Memories Safaris</a>. All Rights Reserved.</span>
+            </div>
+             <div class="col-md-6 my-auto text-center text-md-end text-white">
+                 <a href="privacypolicy.html" class="text-light me-3">Privacy Policy</a>
+                <a href="termsandconditions.html" class="text-light">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+         <script>
+            $(document).ready(function(){
+                // Lightbox Initialization (for footer gallery)
+                 lightbox.option({
+                  'resizeDuration': 200,
+                  'wrapAround': true
+                });
+
+                // WOW Initialization
+                new WOW().init();
+            });
+         </script>
+
+    </body>
+
+</html>

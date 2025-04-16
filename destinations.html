@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Destinations - Golden Memories Safaris</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Tanzania destinations, Serengeti, Kilimanjaro, Zanzibar, Ngorongoro, Tarangire, national parks Tanzania, lakes Tanzania, mountains Tanzania" name="keywords">
+        <meta content="Explore the breathtaking destinations of Tanzania with Golden Memories Safaris. Discover iconic national parks, stunning lakes, majestic mountains, and unique attractions." name="description">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+             /* Page Header Style */
+            .page-header {
+                /* *** REPLACE 'img/destinations-hero.jpg' with your actual hero image for this page *** */
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/destinations-hero.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            /* Destination Card Styling */
+            .destination-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid #eee; /* Subtle border */
+            }
+            .destination-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .destination-card .card-img-top {
+                height: 250px; /* Fixed height for images */
+                object-fit: cover; /* Ensure image covers the area well */
+                 transition: transform 0.5s ease;
+            }
+             .destination-card:hover .card-img-top {
+                 transform: scale(1.05);
+            }
+            .destination-card .card-body {
+                display: flex;
+                flex-direction: column;
+            }
+            .destination-card .card-text {
+                 flex-grow: 1; /* Makes text take available space */
+                 margin-bottom: 1rem; /* Ensure space before button */
+            }
+             .destination-card .btn {
+                 align-self: flex-start; /* Aligns button to the left */
+                 margin-top: auto; /* Pushes button to the bottom */
+             }
+
+             /* Category heading style */
+             .category-heading {
+                 position: relative;
+                 padding-bottom: 10px;
+                 margin-bottom: 30px;
+             }
+             .category-heading::after {
+                 content: '';
+                 position: absolute;
+                 display: block;
+                 width: 60px;
+                 height: 3px;
+                 background: var(--bs-primary);
+                 bottom: 0;
+                 left: 50%;
+                 transform: translateX(-50%);
+             }
+
+             /* Footer Logo */
+             .footer-logo {
+               max-width: 100%;
+               height: auto;
+               filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+             }
+
+             /* Consistent section padding */
+             .py-6 {
+                 padding-top: 6rem;
+                 padding-bottom: 6rem;
+             }
+             .bg-light.py-6 {
+                  padding-top: 5.5rem;
+                  padding-bottom: 5.5rem;
+             }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+           <!-- Navbar start -->
+
+<div class="container-fluid nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Golden Memories Safaris Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="safaris.html" class="nav-item nav-link">Safaris</a>
+                    <a href="destinations.html" class="nav-item nav-link">Destinations</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="blog.html" class="dropdown-item">Travel Blog</a>
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="booking.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+         <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search Golden Memories Safaris</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="Search safaris, destinations, or experiences..." aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Tanzania Destinations</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Destinations</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Destinations Content Start -->
+        <div class="container-fluid py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Explore Tanzania</small>
+                    <h1 class="display-5 mb-5">Iconic Parks, Peaks, Lakes & Attractions</h1>
+                </div>
+
+                               <!-- Category 1: National Parks -->
+                               <section class="mb-5">
+                                <h2 class="text-center mb-4 category-heading wow fadeInUp" data-wow-delay="0.1s">National Parks</h2>
+                                <div class="row g-4 justify-content-center">
+                                    <!-- Serengeti Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-serengeti.jpg" class="card-img-top" alt="Vast plains of Serengeti National Park">
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Serengeti National Park</h5>
+                                                <p class="card-text small text-muted flex-grow-1">World-famous for the Great Migration, endless plains, and exceptional Big Cat sightings.</p> <!-- Added flex-grow-1 -->
+                                                <a href="serengeti.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ngorongoro Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-ngorongoro.jpg" class="card-img-top" alt="Ngorongoro Crater floor with wildlife">
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Ngorongoro Conservation Area</h5>
+                                                <p class="card-text small text-muted flex-grow-1">Home to the stunning Ngorongoro Crater, a unique caldera teeming with wildlife, including the rare black rhino.</p> <!-- Added flex-grow-1 -->
+                                                <a href="ngorongoro.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Tarangire Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-tarangire.jpg" class="card-img-top" alt="Elephants near Baobab trees in Tarangire">
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Tarangire National Park</h5>
+                                                <p class="card-text small text-muted flex-grow-1">Famous for its massive elephant herds, ancient baobab trees, and diverse birdlife along the Tarangire River.</p> <!-- Added flex-grow-1 -->
+                                                <a href="tarangire.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!-- Lake Manyara Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-manyara.jpg" class="card-img-top" alt="Flamingos on Lake Manyara">
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Lake Manyara National Park</h5>
+                                                <p class="card-text small text-muted flex-grow-1">Known for its tree-climbing lions, large troops of baboons, flamingos, and stunning Rift Valley scenery.</p> <!-- Added flex-grow-1 -->
+                                                <a href="manyara.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Arusha National Park Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s"> <!-- Incremented delay -->
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-arusha.jpg" class="card-img-top" alt="Mount Meru in Arusha National Park"> <!-- Updated image/alt -->
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Arusha National Park</h5> <!-- Updated title -->
+                                                <p class="card-text small text-muted flex-grow-1">Home to Mount Meru, diverse landscapes, black-and-white colobus monkeys, and offers walking/canoeing safaris.</p> <!-- Updated text --> <!-- Added flex-grow-1 -->
+                                                <a href="arushanationalpark.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Updated link --> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Gombe Stream National Park Card -->
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> <!-- Incremented delay -->
+                                        <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                            <!-- *** REPLACE IMAGE *** -->
+                                            <img src="img/dest-gombe.jpg" class="card-img-top" alt="Chimpanzee in Gombe Stream National Park"> <!-- Updated image/alt -->
+                                            <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                <h5 class="card-title">Gombe Stream National Park</h5> <!-- Updated title -->
+                                                <p class="card-text small text-muted flex-grow-1">Famous for Jane Goodall's chimpanzee research; trek to see habituated chimps by Lake Tanganyika.</p> <!-- Updated text --> <!-- Added flex-grow-1 -->
+                                                <a href="gombenationalpark.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Updated link --> <!-- Added mt-auto -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!-- Add more National Park cards as needed -->
+            
+                                </div>
+                            </section>
+                <!-- Category 2: Mountains -->
+                <section class="my-5 py-5 bg-light"> <!-- Added background for visual separation -->
+                     <div class="container">
+                        <h2 class="text-center mb-4 category-heading wow fadeInUp" data-wow-delay="0.1s">Mountains & Highlands</h2>
+                        <div class="row g-4 justify-content-center">
+                            <!-- Kilimanjaro Card -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                     <!-- *** REPLACE IMAGE *** -->
+                                    <img src="img/dest-kilimanjaro.jpg" class="card-img-top" alt="Mount Kilimanjaro peak covered in snow">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mount Kilimanjaro</h5>
+                                        <p class="card-text small text-muted">Africa's highest peak and the world's tallest free-standing mountain. A challenging but rewarding trek.</p>
+                                        <a href="mtkilimanjaro.html"class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mount Meru Card -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                    <!-- *** REPLACE IMAGE *** -->
+                                    <img src="img/dest-meru.jpeg" class="card-img-top" alt="View of Mount Meru from Arusha">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mount Meru</h5>
+                                        <p class="card-text small text-muted">Tanzania's second-highest peak, located within Arusha National Park. Offers great acclimatization and stunning views.</p>
+                                        <a href="mtmeru.html" class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Usambara Mountains Card -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                    <!-- *** REPLACE IMAGE *** -->
+                                    <img src="img/dest-usambara.jpeg" class="card-img-top" alt="Lush green landscape of the Usambara Mountains">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Usambara Mountains</h5>
+                                        <p class="card-text small text-muted">Biodiversity hotspot offering lush forests, cool air, hiking trails, and cultural encounters.</p>
+                                        <a href="mtusambara.html" class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more Mountain cards as needed -->
+                        </div>
+                     </div>
+                </section>
+
+                <!-- Category 3: Lakes -->
+                <section class="my-5">
+                    <h2 class="text-center mb-4 category-heading wow fadeInUp" data-wow-delay="0.1s">Lakes</h2>
+                    <div class="row g-4 justify-content-center">
+                        <!-- Lake Natron Card -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                <!-- *** REPLACE IMAGE *** -->
+                                <img src="img/dest-natron.jpeg" class="card-img-top" alt="Vast salt flats and flamingos at Lake Natron">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lake Natron</h5>
+                                    <p class="card-text small text-muted">A surreal soda lake, the primary breeding ground for Lesser Flamingos, with dramatic volcanic scenery.</p>
+                                    <a href="lakenatron.html" class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lake Eyasi Card -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                <!-- *** REPLACE IMAGE *** -->
+                                <img src="img/dest-eyasi.jpeg" class="card-img-top" alt="Landscape around Lake Eyasi with Hadzabe people">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lake Eyasi</h5>
+                                    <p class="card-text small text-muted">A seasonal shallow salt lake, home to indigenous tribes like the Hadzabe hunter-gatherers and Datoga pastoralists.</p>
+                                    <a href="lakeeyasi.html"class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Lake Victoria Card -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                <!-- *** REPLACE IMAGE *** -->
+                                <img src="img/dest-victoria.jpeg" class="card-img-top" alt="Fishing boats on Lake Victoria at sunset">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lake Victoria</h5>
+                                    <p class="card-text small text-muted">Africa's largest lake, offering fishing opportunities, bird watching, and access to islands like Rubondo.</p>
+                                    <a href="lakevictoria.html" class="btn btn-sm btn-primary">View More <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more Lake cards as needed -->
+                    </div>
+                </section>
+
+                                 <!-- Category 4: Tourist Attractions -->
+                                 <section class="my-5 py-5 bg-light"> <!-- Added background for visual separation -->
+                                    <div class="container">
+                                        <h2 class="text-center mb-4 category-heading wow fadeInUp" data-wow-delay="0.1s">Other Attractions & Experiences</h2> <!-- Updated heading -->
+                                        <div class="row g-4 justify-content-center">
+                                            <!-- Zanzibar Card -->
+                                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                                    <!-- *** REPLACE IMAGE *** -->
+                                                    <img src="img/dest-zanzibar.jpeg" class="card-img-top" alt="White sand beach and turquoise water in Zanzibar">
+                                                    <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                        <h5 class="card-title">Zanzibar Archipelago</h5>
+                                                        <p class="card-text small text-muted flex-grow-1">Famous for stunning beaches, turquoise waters, historic Stone Town (UNESCO site), spice farms, and rich culture.</p> <!-- Added flex-grow-1 -->
+                                                        <a href="ZanzibarArchipelago.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Updated link & Added mt-auto -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Materuni Card -->
+                                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> <!-- Replaced Olduvai -->
+                                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                                     <!-- *** REPLACE IMAGE *** -->
+                                                    <img src="img/dest-materuni.jpg" class="card-img-top" alt="Materuni Waterfall cascading down rocks"> <!-- Updated Image & Alt -->
+                                                    <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                        <h5 class="card-title">Materuni Waterfall & Coffee</h5> <!-- Updated Title -->
+                                                        <p class="card-text small text-muted flex-grow-1">Hike to a beautiful waterfall near Moshi, enjoy a hands-on coffee tour, and experience Chagga culture.</p> <!-- Updated Text --> <!-- Added flex-grow-1 -->
+                                                        <a href="materuni.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Updated Link & Added mt-auto -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Serval Wildlife Card -->
+                                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s"> <!-- Replaced Maasai Culture -->
+                                                <div class="destination-card card h-100 shadow-sm border-0 overflow-hidden">
+                                                    <!-- *** REPLACE IMAGE *** -->
+                                                    <img src="img/dest-serval.jpg" class="card-img-top" alt="Visitor interacting with a Serval cat"> <!-- Updated Image & Alt -->
+                                                    <div class="card-body d-flex flex-column"> <!-- Added d-flex -->
+                                                        <h5 class="card-title">Serval Wildlife Experience</h5> <!-- Updated Title -->
+                                                        <p class="card-text small text-muted flex-grow-1">Get up close with habituated servals, caracals, cheetahs, and more at this unique sanctuary near Kilimanjaro.</p> <!-- Updated Text --> <!-- Added flex-grow-1 -->
+                                                        <a href="serval.html" class="btn btn-sm btn-primary mt-auto">View More <i class="fas fa-arrow-right ms-1"></i></a> <!-- Updated Link & Added mt-auto -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Add more Attraction cards as needed -->
+                                        </div>
+                                    </div>
+                                </section>
+
+
+         <!-- Footer Start -->
+<div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+
+                      <!-- Column 1: Logo, Contact Info, Social Icons -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a href="/">
+                                <img src="img/logo.png"
+                                     alt="Golden Memories Safaris Logo"
+                                     class="footer-logo mb-4"
+                                     width="180" height="40">
+                              </a>
+                            <!-- Contact Info Moved Here -->
+                            <div class="d-flex flex-column align-items-start mb-4">
+                                <!-- Added mb-1 to each <p> tag below -->
+                                <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i> Arusha, Tanzania</p>
+                                <p class="mb-1"><i class="fa fa-phone-alt text-primary me-2"></i> +255 786 383 273 </p>
+                                <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> info@gmsafaris.co.tz</p>
+                                <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i> Mon-Sun: 8AM - 6PM</p>
+                                <!-- Removed margin from last paragraph to prevent double margin with parent div's mb-4 -->
+                                <!-- If the last p still has too much space below it, you could use mb-0 on it -->
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="tailoredsafaris.html"><i class="fa fa-check text-primary me-2"></i>Tailored Safaris</a>
+                        <a class="text-body mb-2" href="luxurysafari.html"><i class="fa fa-check text-primary me-2"></i>Luxury Safaris</a>
+                        <a class="text-body mb-2" href="mountaintrekking.html"><i class="fa fa-check text-primary me-2"></i>Mountain Trekking</a>
+                        <a class="text-body mb-2" href="groupsafaris.html"><i class="fa fa-check text-primary me-2"></i>Group Safaris</a>
+                        <a class="text-body mb-2" href="ZanzibarArchipelago.html"><i class="fa fa-check text-primary me-2"></i>Zanzibar Holidays</a>
+                        <a class="text-body mb-2" href="budgetsafari.html"><i class="fa fa-check text-primary me-2"></i>Budget Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Useful Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="besttimetovisit.html"><i class="fa fa-check text-primary me-2"></i>Best Time to Visit</a>
+                        <a class="text-body mb-2" href="localcustoms.html"><i class="fa fa-check text-primary me-2"></i>Local Customs & Etiquette</a>
+                        <a class="text-body mb-2" href="healthandsafety.html"><i class="fa fa-check text-primary me-2"></i>Health & Safety Guide</a>
+                        <a class="text-body mb-2" href="visa.html"><i class="fa fa-check text-primary me-2"></i>Visa Information</a>
+                        <a class="text-body mb-2" href="insuarance.html"><i class="fa fa-check text-primary me-2"></i>Insurance & Emergency</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Connect & Review -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Connect & Review</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="https://immigration.go.tz/" target="_blank" rel="noopener noreferrer"><i class="fas fa-passport text-primary me-2"></i>Official eVisa Application</a>
+                        <a class="text-body mb-2" href="https://www.tripadvisor.com/Attraction_Review-g297913-d27751442-Reviews-GOLDEN_MEMORIES_SAFARIS-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen text-primary me-2"></i>Review us on TripAdvisor</a>
+                        <a class="text-body mb-2" href="https://www.getyourguide.com/golden-memories-safaris-s392921/" target="_blank" rel="noopener noreferrer"><i class="fas fa-route text-primary me-2"></i>Find us on GetYourGuide</a>
+                        <a class="text-body mb-2" href="https://immigration.go.tz/index.php/immigration-hq-dodoma" target="_blank" rel="noopener noreferrer"><i class="fas fa-hands-helping text-primary me-2"></i>Contact your Embassy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#" class="text-primary"><i class="fas fa-copyright text-light me-2"></i>Golden Memories Safaris</a>. All Rights Reserved.</span>
+            </div>
+             <div class="col-md-6 my-auto text-center text-md-end text-white">
+                 <a href="privacypolicy.html" class="text-light me-3">Privacy Policy</a>
+                <a href="termsandconditions.html" class="text-light">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+         <script>
+            $(document).ready(function(){
+                // Lightbox Initialization (for footer gallery)
+                 lightbox.option({
+                  'resizeDuration': 200,
+                  'wrapAround': true
+                });
+
+                // WOW Initialization
+                new WOW().init();
+            });
+         </script>
+
+    </body>
+
+</html>

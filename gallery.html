@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gallery - Golden Memories Safaris</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Tanzania safari gallery, wildlife photos, Serengeti pictures, Kilimanjaro photos, Zanzibar photos, safari images" name="keywords">
+        <meta content="Explore stunning photos from Golden Memories Safaris adventures across Tanzania. Get inspired by incredible wildlife, breathtaking landscapes, vibrant cultures, and beautiful lodges." name="description">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet"> <!-- Essential for gallery -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+             /* Page Header Style */
+            .page-header {
+                /* *** REPLACE 'img/gallery-hero.jpg' with your actual hero image for this page *** */
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gallery-hero.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            /* Gallery Filter Pills Styling */
+            .gallery-filter .nav-pills .nav-link {
+                background-color: var(--bs-light);
+                color: var(--bs-dark);
+                border: 1px solid var(--bs-primary);
+                border-radius: 50rem; /* Make pills rounded */
+                padding: 8px 25px;
+                margin: 0 5px 10px 5px; /* Add spacing */
+                transition: all 0.3s ease;
+            }
+            .gallery-filter .nav-pills .nav-link:hover {
+                background-color: var(--bs-primary-light); /* Lighter primary on hover */
+                color: var(--bs-primary);
+                 border-color: var(--bs-primary-light);
+            }
+            .gallery-filter .nav-pills .nav-link.active {
+                background-color: var(--bs-primary);
+                color: var(--bs-white);
+                border-color: var(--bs-primary);
+            }
+
+            /* Gallery Item Styling */
+            .gallery-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .gallery-item:hover {
+                 transform: translateY(-5px) scale(1.02);
+                 box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            }
+            .gallery-item img {
+                display: block;
+                width: 100%;
+                height: 280px; /* Consistent height for thumbnails */
+                object-fit: cover;
+            }
+            .gallery-item .gallery-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .gallery-item:hover .gallery-overlay {
+                opacity: 1;
+            }
+            .gallery-item .gallery-overlay i {
+                color: white;
+                font-size: 2rem;
+            }
+
+             /* Footer Logo */
+             .footer-logo {
+               max-width: 100%;
+               height: auto;
+               filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+             }
+             /* Consistent section padding */
+             .py-6 {
+                 padding-top: 6rem;
+                 padding-bottom: 6rem;
+             }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+   <!-- Navbar start -->
+
+   <div class="container-fluid nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Golden Memories Safaris Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="safaris.html" class="nav-item nav-link">Safaris</a>
+                    <a href="destinations.html" class="nav-item nav-link">Destinations</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="blog.html" class="dropdown-item">Travel Blog</a>
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="booking.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+         <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search Golden Memories Safaris</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="Search safaris, destinations, or experiences..." aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Our Safari Gallery</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Gallery Intro Start -->
+        <div class="container-fluid py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                     <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Visual Journey</small>
+                    <h1 class="display-5 mb-4">Experience Tanzania Through Our Lens</h1>
+                    <p class="lead mb-5 mx-auto" style="max-width: 800px;">
+                        Welcome to the Golden Memories Safaris gallery! This section offers a glimpse into the magic of Tanzania as captured during our adventures. Browse through stunning wildlife encounters, breathtaking landscapes, vibrant cultural moments, and the comfortable lodges that await you. We hope these images inspire your own unforgettable Tanzanian journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Intro End -->
+
+
+        <!-- Gallery Content Start -->
+        <div class="container-fluid gallery-filter pb-6"> <!-- Removed top padding, added bottom padding -->
+            <div class="container">
+
+                <!-- Filter Pills Start -->
+                <div class="row justify-content-center wow bounceInUp" data-wow-delay="0.2s">
+                    <div class="col-12 text-center mb-5">
+                        <ul class="nav nav-pills justify-content-center" id="gallery-pills" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#gallery-all" type="button" role="tab" aria-controls="gallery-all" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wildlife-tab" data-bs-toggle="pill" data-bs-target="#gallery-wildlife" type="button" role="tab" aria-controls="gallery-wildlife" aria-selected="false">Wildlife</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-landscapes-tab" data-bs-toggle="pill" data-bs-target="#gallery-landscapes" type="button" role="tab" aria-controls="gallery-landscapes" aria-selected="false">Landscapes</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-people-tab" data-bs-toggle="pill" data-bs-target="#gallery-people" type="button" role="tab" aria-controls="gallery-people" aria-selected="false">People & Culture</button>
+                            </li>
+                             <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-lodges-tab" data-bs-toggle="pill" data-bs-target="#gallery-lodges" type="button" role="tab" aria-controls="gallery-lodges" aria-selected="false">Lodges & Camps</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Filter Pills End -->
+
+
+                <!-- Tab Content Start -->
+                <div class="tab-content" id="gallery-pills-content">
+
+                    <!-- Tab Pane: All -->
+                    <div class="tab-pane fade show active" id="gallery-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                        <div class="row g-4">
+                            <!-- Add ALL your gallery items here, copying the structure from below -->
+                            <!-- Example Item (Wildlife) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-1.jpg" data-lightbox="wildlife" data-title="Majestic Lion in the Serengeti">
+                                        <img src="img/gallery/thumb/wildlife-1.jpg" class="img-fluid" alt="Majestic Lion in the Serengeti">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (Landscape) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/landscape-1.jpg" data-lightbox="landscapes" data-title="Sunrise over Ngorongoro Crater">
+                                        <img src="img/gallery/thumb/landscape-1.jpg" class="img-fluid" alt="Sunrise over Ngorongoro Crater">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (People) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/people-1.jpg" data-lightbox="people" data-title="Maasai Children near their Boma">
+                                        <img src="img/gallery/thumb/people-1.jpg" class="img-fluid" alt="Maasai Children near their Boma">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (Lodge) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/lodge-1.jpg" data-lightbox="lodges" data-title="Luxury Tented Camp under the Stars">
+                                        <img src="img/gallery/thumb/lodge-1.jpg" class="img-fluid" alt="Luxury Tented Camp under the Stars">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (Wildlife 2) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-2.jpg" data-lightbox="wildlife" data-title="Herd of Elephants in Tarangire">
+                                        <img src="img/gallery/thumb/wildlife-2.jpg" class="img-fluid" alt="Herd of Elephants in Tarangire">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (Landscape 2) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/landscape-2.jpg" data-lightbox="landscapes" data-title="Kilimanjaro Peak above the Clouds">
+                                        <img src="img/gallery/thumb/landscape-2.jpg" class="img-fluid" alt="Kilimanjaro Peak above the Clouds">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Add more items covering all categories -->
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane: Wildlife -->
+                    <div class="tab-pane fade" id="gallery-wildlife" role="tabpanel" aria-labelledby="pills-wildlife-tab">
+                        <div class="row g-4">
+                            <!-- Add ONLY Wildlife items here -->
+                             <!-- Example Item (Wildlife) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-1.jpg" data-lightbox="wildlife" data-title="Majestic Lion in the Serengeti">
+                                        <img src="img/gallery/thumb/wildlife-1.jpg" class="img-fluid" alt="Majestic Lion in the Serengeti">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Example Item (Wildlife 2) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-2.jpg" data-lightbox="wildlife" data-title="Herd of Elephants in Tarangire">
+                                        <img src="img/gallery/thumb/wildlife-2.jpg" class="img-fluid" alt="Herd of Elephants in Tarangire">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- *** Add more wildlife photos here *** -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-3.jpg" data-lightbox="wildlife" data-title="Leopard resting on a branch">
+                                        <img src="img/gallery/thumb/wildlife-3.jpg" class="img-fluid" alt="Leopard resting on a branch">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/wildlife-4.jpg" data-lightbox="wildlife" data-title="Zebras grazing on the plains">
+                                        <img src="img/gallery/thumb/wildlife-4.jpg" class="img-fluid" alt="Zebras grazing on the plains">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane: Landscapes -->
+                    <div class="tab-pane fade" id="gallery-landscapes" role="tabpanel" aria-labelledby="pills-landscapes-tab">
+                         <div class="row g-4">
+                            <!-- Add ONLY Landscape items here -->
+                             <!-- Example Item (Landscape) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/landscape-1.jpg" data-lightbox="landscapes" data-title="Sunrise over Ngorongoro Crater">
+                                        <img src="img/gallery/thumb/landscape-1.jpg" class="img-fluid" alt="Sunrise over Ngorongoro Crater">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                              <!-- Example Item (Landscape 2) -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/landscape-2.jpg" data-lightbox="landscapes" data-title="Kilimanjaro Peak above the Clouds">
+                                        <img src="img/gallery/thumb/landscape-2.jpg" class="img-fluid" alt="Kilimanjaro Peak above the Clouds">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- *** Add more landscape photos here *** -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/landscape-3.jpg" data-lightbox="landscapes" data-title="Baobab Tree at Sunset in Tarangire">
+                                        <img src="img/gallery/thumb/landscape-3.jpg" class="img-fluid" alt="Baobab Tree at Sunset in Tarangire">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                    <!-- Tab Pane: People & Culture -->
+                    <div class="tab-pane fade" id="gallery-people" role="tabpanel" aria-labelledby="pills-people-tab">
+                         <div class="row g-4">
+                            <!-- Add ONLY People & Culture items here -->
+                              <!-- Example Item (People) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/people-1.jpg" data-lightbox="people" data-title="Maasai Children near their Boma">
+                                        <img src="img/gallery/thumb/people-1.jpg" class="img-fluid" alt="Maasai Children near their Boma">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- *** Add more people/culture photos here *** -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/people-2.jpg" data-lightbox="people" data-title="Hadzabe Hunter with Bow">
+                                        <img src="img/gallery/thumb/people-2.jpg" class="img-fluid" alt="Hadzabe Hunter with Bow">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/people-3.jpg" data-lightbox="people" data-title="Local Market Scene in Arusha">
+                                        <img src="img/gallery/thumb/people-3.jpg" class="img-fluid" alt="Local Market Scene in Arusha">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                     <!-- Tab Pane: Lodges & Camps -->
+                    <div class="tab-pane fade" id="gallery-lodges" role="tabpanel" aria-labelledby="pills-lodges-tab">
+                         <div class="row g-4">
+                            <!-- Add ONLY Lodges & Camps items here -->
+                             <!-- Example Item (Lodge) -->
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/lodge-1.jpg" data-lightbox="lodges" data-title="Luxury Tented Camp under the Stars">
+                                        <img src="img/gallery/thumb/lodge-1.jpg" class="img-fluid" alt="Luxury Tented Camp under the Stars">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- *** Add more lodge/camp photos here *** -->
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/lodge-2.jpg" data-lightbox="lodges" data-title="Safari Lodge Pool with a View">
+                                        <img src="img/gallery/thumb/lodge-2.jpg" class="img-fluid" alt="Safari Lodge Pool with a View">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="gallery-item">
+                                    <a href="img/gallery/full/lodge-3.jpg" data-lightbox="lodges" data-title="Cozy Interior of a Safari Tent">
+                                        <img src="img/gallery/thumb/lodge-3.jpg" class="img-fluid" alt="Cozy Interior of a Safari Tent">
+                                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </a>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+                <!-- Tab Content End -->
+
+            </div>
+        </div>
+        <!-- Gallery Content End -->
+
+
+        <!-- Footer Start -->
+<div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+
+                      <!-- Column 1: Logo, Contact Info, Social Icons -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a href="/">
+                                <img src="img/logo.png"
+                                     alt="Golden Memories Safaris Logo"
+                                     class="footer-logo mb-4"
+                                     width="180" height="40">
+                              </a>
+                            <!-- Contact Info Moved Here -->
+                            <div class="d-flex flex-column align-items-start mb-4">
+                                <!-- Added mb-1 to each <p> tag below -->
+                                <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i> Arusha, Tanzania</p>
+                                <p class="mb-1"><i class="fa fa-phone-alt text-primary me-2"></i> +255 786 383 273 </p>
+                                <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> info@gmsafaris.co.tz</p>
+                                <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i> Mon-Sun: 8AM - 6PM</p>
+                                <!-- Removed margin from last paragraph to prevent double margin with parent div's mb-4 -->
+                                <!-- If the last p still has too much space below it, you could use mb-0 on it -->
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="tailoredsafaris.html"><i class="fa fa-check text-primary me-2"></i>Tailored Safaris</a>
+                        <a class="text-body mb-2" href="luxurysafari.html"><i class="fa fa-check text-primary me-2"></i>Luxury Safaris</a>
+                        <a class="text-body mb-2" href="mountaintrekking.html"><i class="fa fa-check text-primary me-2"></i>Mountain Trekking</a>
+                        <a class="text-body mb-2" href="groupsafaris.html"><i class="fa fa-check text-primary me-2"></i>Group Safaris</a>
+                        <a class="text-body mb-2" href="ZanzibarArchipelago.html"><i class="fa fa-check text-primary me-2"></i>Zanzibar Holidays</a>
+                        <a class="text-body mb-2" href="budgetsafari.html"><i class="fa fa-check text-primary me-2"></i>Budget Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Useful Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="besttimetovisit.html"><i class="fa fa-check text-primary me-2"></i>Best Time to Visit</a>
+                        <a class="text-body mb-2" href="localcustoms.html"><i class="fa fa-check text-primary me-2"></i>Local Customs & Etiquette</a>
+                        <a class="text-body mb-2" href="healthandsafety.html"><i class="fa fa-check text-primary me-2"></i>Health & Safety Guide</a>
+                        <a class="text-body mb-2" href="visa.html"><i class="fa fa-check text-primary me-2"></i>Visa Information</a>
+                        <a class="text-body mb-2" href="insuarance.html"><i class="fa fa-check text-primary me-2"></i>Insurance & Emergency</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Connect & Review -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="mb-4">Connect & Review</h4>
+                    <div class="d-flex flex-column align-items-start">
+                         <!-- Changed mb-3 to mb-2 -->
+                        <a class="text-body mb-2" href="https://immigration.go.tz/" target="_blank" rel="noopener noreferrer"><i class="fas fa-passport text-primary me-2"></i>Official eVisa Application</a>
+                        <a class="text-body mb-2" href="https://www.tripadvisor.com/Attraction_Review-g297913-d27751442-Reviews-GOLDEN_MEMORIES_SAFARIS-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen text-primary me-2"></i>Review us on TripAdvisor</a>
+                        <a class="text-body mb-2" href="https://www.getyourguide.com/golden-memories-safaris-s392921/" target="_blank" rel="noopener noreferrer"><i class="fas fa-route text-primary me-2"></i>Find us on GetYourGuide</a>
+                        <a class="text-body mb-2" href="https://immigration.go.tz/index.php/immigration-hq-dodoma" target="_blank" rel="noopener noreferrer"><i class="fas fa-hands-helping text-primary me-2"></i>Contact your Embassy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#" class="text-primary"><i class="fas fa-copyright text-light me-2"></i>Golden Memories Safaris</a>. All Rights Reserved.</span>
+            </div>
+             <div class="col-md-6 my-auto text-center text-md-end text-white">
+                 <a href="privacypolicy.html" class="text-light me-3">Privacy Policy</a>
+                <a href="termsandconditions.html" class="text-light">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script> <!-- Essential for gallery -->
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+         <script>
+            $(document).ready(function(){
+                // Lightbox Initialization
+                 lightbox.option({
+                  'resizeDuration': 200,
+                  'wrapAround': true,
+                  'fadeDuration': 300,
+                  'imageFadeDuration': 300,
+                   'alwaysShowNavOnTouchDevices': true // Good for mobile
+                });
+
+                // WOW Initialization
+                new WOW().init();
+
+                 // Optional: If you want the page to scroll smoothly when clicking filters (if content is long)
+                 $('.gallery-filter .nav-link').on('click', function (e) {
+                     // Optional smooth scroll could be added here if needed
+                     // For example, scrolling to the top of the tab content
+                     // $('html, body').animate({
+                     //     scrollTop: $("#gallery-pills-content").offset().top - 150 // Adjust offset
+                     // }, 500);
+                 });
+            });
+         </script>
+
+    </body>
+
+</html>
