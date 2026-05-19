@@ -53,9 +53,7 @@ module.exports = {
       // Elfsight widget classes
       /^elfsight/,
 
-      // Spinner
-      'spinner-grow',
-      'spinner-border',
+
 
       // Back to top
       'back-to-top',

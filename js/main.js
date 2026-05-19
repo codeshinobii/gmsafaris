@@ -1,8 +1,6 @@
 (function ($) {
     "use strict";
 
-    // Spinner removed — already display:none via inline style (no layout impact)
-
     // WOW.js initialized in scripts.blade.php (deferred after LCP) — not here
 
     // Back to top button — use CSS opacity/visibility instead of jQuery fadeIn/fadeOut
