@@ -1,0 +1,146 @@
+// ═══════════════════════════════════════════════════════════
+// GOLDEN MEMORIES SAFARIS — Custom Bootstrap 5 Build
+// ═══════════════════════════════════════════════════════════
+// Only imports the Bootstrap components actually used by the site.
+// File size target: ~50KB vs original 166KB (70% reduction)
+
+// 1. Override Bootstrap variables FIRST (before importing Bootstrap)
+// ─── Colors ───
+$primary:       #D4A762;  // Gold — replaces default blue
+$secondary:     #9A9A9A;  // Warm gray
+$light:         #FFFCF8;  // Warm off-white
+$dark:          #050709;  // Near-black
+
+// ─── Border Radius ───
+$border-radius:           0.5rem;  // 8px — matches current design
+$border-radius-sm:        0.25rem; // 4px
+$border-radius-lg:        0.75rem; // 12px
+$border-radius-pill:      50rem;
+
+// ─── Font ───
+$font-family-sans-serif:  'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base:        $font-family-sans-serif;
+$font-size-base:          1rem;
+
+// ─── Dropdown ───
+$dropdown-link-color:            #212529;
+$dropdown-link-hover-color:      #fff;
+$dropdown-link-hover-bg:         #D4A762;
+$dropdown-link-active-color:     #fff;
+$dropdown-link-active-bg:        #D4A762;
+
+// ─── Navbar ───
+$navbar-light-color:              rgba(0, 0, 0, 0.55);
+$navbar-light-hover-color:        rgba(0, 0, 0, 0.7);
+$navbar-light-active-color:       rgba(0, 0, 0, 0.9);
+$navbar-light-toggler-border-color: rgba(0, 0, 0, 0.1);
+
+// ─── Card ───
+$card-border-radius:         $border-radius;
+$card-cap-bg:                rgba(0, 0, 0, 0.03);
+
+// ─── Input ───
+$input-border-radius:        $border-radius;
+$input-border-radius-sm:     $border-radius-sm;
+$input-border-radius-lg:     $border-radius-lg;
+
+// ─── Modal ───
+$modal-content-border-radius: $border-radius;
+
+// ─── Alert ───
+$alert-border-radius:        $border-radius;
+
+// ─── Table ───
+$table-border-radius:        $border-radius;
+
+// ─── Badge ───
+$badge-border-radius:        $border-radius;
+
+// ─── Breadcrumb ───
+$breadcrumb-border-radius:   $border-radius;
+
+// ─── List Group (included for completeness) ───
+$list-group-border-radius:   $border-radius;
+
+// ─── Popover ───
+$popover-border-radius:      $border-radius;
+
+
+// 2. Import Bootstrap functions, variables, mixins (required)
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+
+// 3. Import ONLY the Bootstrap components used by the site
+//
+//    GRID SYSTEM ───
+@import "bootstrap/scss/root";          // CSS custom properties
+@import "bootstrap/scss/reboot";        // Normalize / reset
+@import "bootstrap/scss/type";          // Typography (headings, body, links)
+@import "bootstrap/scss/images";        // .img-fluid, .img-thumbnail
+@import "bootstrap/scss/containers";    // .container, .container-fluid
+@import "bootstrap/scss/grid";          // .row, .col-*, .g-*, gutters
+@import "bootstrap/scss/tables";        // .table, .table-responsive, etc.
+
+//    FORMS ───
+@import "bootstrap/scss/forms";         // .form-control, .form-select, .input-group, .form-check, etc.
+
+//    COMPONENTS ───
+@import "bootstrap/scss/buttons";       // .btn, .btn-primary, .btn-outline-*, etc.
+@import "bootstrap/scss/transitions";   // .fade
+@import "bootstrap/scss/dropdown";      // .dropdown, .dropdown-menu, .dropdown-item, etc.
+@import "bootstrap/scss/button-group";  // .btn-group, .btn-toolbar
+@import "bootstrap/scss/nav";           // .nav, .nav-link base
+@import "bootstrap/scss/navbar";        // .navbar, .navbar-brand, .navbar-nav, .navbar-toggler, .collapse
+@import "bootstrap/scss/card";          // .card, .card-body, .card-title, etc.
+@import "bootstrap/scss/breadcrumb";    // .breadcrumb
+@import "bootstrap/scss/badge";         // .badge
+@import "bootstrap/scss/alert";         // .alert, .alert-info, .alert-danger, etc.
+@import "bootstrap/scss/close";         // .btn-close
+@import "bootstrap/scss/modal";         // .modal, .modal-dialog, .modal-content, etc.
+@import "bootstrap/scss/pagination";    // .pagination, .page-item, .page-link
+@import "bootstrap/scss/spinners";      // .spinner-grow, .spinner-border
+@import "bootstrap/scss/tooltip";       // .tooltip (used by some JS plugins)
+
+//    HELPERS ───
+@import "bootstrap/scss/helpers";       // .visually-hidden, .stretched-link, .text-truncate, .ratio
+
+//    UTILITIES ───
+// Utilities map (defines display, flex, spacing, text, bg, border, etc.)
+@import "bootstrap/scss/utilities";
+// Utilities API — generates all utility classes from the map
+$enable-important-utilities: true;
+@import "bootstrap/scss/utilities/api";
+
+//    NOT IMPORTED (saves ~100KB):
+//    _carousel.scss     → Using Owl Carousel instead
+//    _accordion.scss    → Not used on site
+//    _progress.scss     → Not used
+//    _toasts.scss       → Not used
+//    _popover.scss      → Not used
+//    _offcanvas.scss    → Not used
+//    _placeholders      → Not used (Bootstrap 5.1+)
+
+
+// 4. Site-specific overrides that can't be done via variables
+//    These match what's in the original bootstrap.min.css customizations
+
+// Search modal
+#searchModal .modal-content {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+// Video modal (highest z-index)
+#videoModal {
+    z-index: 99999;
+    .modal-dialog {
+        position: relative;
+        max-width: 800px;
+        margin: 60px auto 0;
+    }
+    .modal-body {
+        position: relative;
+        padding: 0;
+    }
+}
