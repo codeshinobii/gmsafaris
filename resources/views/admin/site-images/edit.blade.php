@@ -14,7 +14,7 @@
                     </a>
                 </div>
 
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('admin.site-images.update', $siteImage) }}">
                     @csrf
                     @method('PUT')
 
