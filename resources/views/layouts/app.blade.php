@@ -33,6 +33,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
+    <!-- Ensure hero carousel is visible even without OwlCarousel JS (e.g. slow network) -->
+    <style>
+        .hero-carousel.owl-carousel { display: block; }
+        .hero-carousel .item:not(:first-child) { display: none; }
+    </style>
+
     <!-- Preload hero image with responsive media queries for LCP optimization -->
     <link rel="preload" as="image" href="{{ site_image('home_hero_1_480w') }}" media="(max-width: 480px)" fetchpriority="high">
     <link rel="preload" as="image" href="{{ site_image('home_hero_1_768w') }}" media="(min-width: 481px) and (max-width: 768px)" fetchpriority="high">

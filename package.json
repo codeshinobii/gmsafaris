@@ -7,7 +7,9 @@
     "build:all": "npm run build && echo '✓ PurgeCSS + critical CSS generated. Run `git add css/purged/` to deploy.'"
   },
   "devDependencies": {
+    "bootstrap": "^5.0.0",
+    "critical": "^5.0.0",
     "purgecss": "^5.0.0",
-    "critical": "^5.0.0"
+    "sass": "^1.99.0"
   }
 }
