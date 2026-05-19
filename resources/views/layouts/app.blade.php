@@ -82,7 +82,7 @@
         .hero-carousel .item,
         .hero-carousel .owl-item,
         .hero-carousel .owl-stage-outer,
-        .hero-carousel .owl-stage { position: relative; height: 90vh; min-height: 500px; }
+        .hero-carousel .owl-stage { position: relative; height: 90vh !important; min-height: 500px !important; }
         .hero-carousel { position: relative; }
         .hero-carousel .carousel-image-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .hero-carousel .carousel-image-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.45); }
