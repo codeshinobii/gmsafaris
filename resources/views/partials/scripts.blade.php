@@ -6,7 +6,7 @@
 <script defer src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
 <script defer src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
 <script defer src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script defer src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
 <!-- Template Javascript (minified for production) -->
 <script defer src="{{ asset('js/main.min.js') }}"></script>
