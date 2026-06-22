@@ -40,12 +40,12 @@ class InquiryController extends Controller
 
         // ═══════════════════════════════════════════
         // 🛡️ SPAM DEFENSE LAYER 2: Time gate
-        // Humans need at least 5 seconds to fill a form.
+        // Humans need at least 3 seconds to fill any form.
         // ═══════════════════════════════════════════
         $timestamp = $request->input('_timestamp');
         if ($timestamp && is_numeric($timestamp)) {
             $elapsed = time() - (int) $timestamp;
-            if ($elapsed < 5) {
+            if ($elapsed < 3) {
                 return $this->fakeSuccess($request);
             }
         }
