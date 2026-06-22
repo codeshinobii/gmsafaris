@@ -157,6 +157,10 @@
                     <div class="card shadow-sm border-light p-4 p-md-5 booking-form">
                         <form id="bookingForm" action="{{ route('inquiry.store') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="_timestamp" value="{{ time() }}">
+                            <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+                            </div>
                             <h4 class="mb-4 text-primary border-bottom pb-2"><i class="fas fa-user-circle me-2"></i>Your Contact Information</h4>
                             <div class="row g-3 mb-4">
                                 <div class="col-md-6">

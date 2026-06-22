@@ -9,3 +9,5 @@
 bootstrap/cache/packages.php
 bootstrap/cache/services.php
 bootstrap/cache/routes-v7.php
+*.sqlite
+/database/database.sqlite

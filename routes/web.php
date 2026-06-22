@@ -41,7 +41,9 @@ Route::get('/booking/confirmation/{reference}', [BookingController::class, 'conf
 
 // Inquiry System
 Route::get('/inquiry/{slug?}', [InquiryController::class, 'create'])->name('inquiry.create');
-Route::post('/inquiry', [InquiryController::class, 'store'])->name('inquiry.store');
+Route::post('/inquiry', [InquiryController::class, 'store'])
+    ->name('inquiry.store')
+    ->middleware('throttle:3,10'); // 🛡️ Anti-spam: max 3 submissions per IP every 10 minutes
 Route::get('/inquiry/thank-you', [InquiryController::class, 'thankYou'])->name('inquiry.thank-you');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::view('/testimonial', 'testimonial')->name('testimonial');
@@ -110,6 +112,7 @@ Route::view('/healthandsafety', 'healthandsafety')->name('healthandsafety');
 Route::view('/visa', 'visa')->name('visa');
 Route::view('/insurance', 'insurance')->name('insurance');
 Route::view('/kilimanjaroroutes', 'kilimanjaroroutes')->name('kilimanjaroroutes');
+Route::view('/poland', 'poland')->name('poland');
 Route::view('/privacypolicy', 'privacypolicy')->name('privacypolicy');
 Route::view('/termsandconditions', 'termsandconditions')->name('termsandconditions');
 Route::view('/package-details', 'package-details')->name('package-details');

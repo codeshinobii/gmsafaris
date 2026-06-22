@@ -1083,6 +1083,10 @@
                     </div>
                     <form action="{{ route('inquiry.store') }}" method="POST" id="homeQuoteForm">
                         @csrf
+                        <input type="hidden" name="_timestamp" value="{{ time() }}">
+                        <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+                        </div>
                         <input type="hidden" name="subject" value="Homepage Quick Quote">
                         <input type="hidden" name="message" id="homeQuoteMessage" value="Quick quote request from homepage">
                         <div class="row g-4 justify-content-center">

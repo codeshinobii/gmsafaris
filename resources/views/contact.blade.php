@@ -234,6 +234,10 @@
                     <div class="card border-0 shadow-sm p-4 contact-form">
                         <form id="contactForm" action="{{ route('inquiry.store') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="_timestamp" value="{{ time() }}">
+                            <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+                            </div>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="contactName" class="form-label">Your Name <span class="text-danger">*</span></label>

@@ -597,6 +597,10 @@
                         <div class="card-body p-4 p-md-5">
                             <form action="{{ route('inquiry.store') }}" method="POST">
                                 @csrf
+                                <input type="hidden" name="_timestamp" value="{{ time() }}">
+                                <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                                    <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+                                </div>
                                 <input type="hidden" name="subject" value="Great Migration Safari Inquiry">
                                 <div class="row g-4">
                                     <div class="col-md-6">

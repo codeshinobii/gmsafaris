@@ -62,6 +62,10 @@
                     <div class="card shadow-sm border-light p-4 p-md-5">
                         <form method="POST" action="{{ route('inquiry.store') }}" class="inquiry-form">
                             @csrf
+                            <input type="hidden" name="_timestamp" value="{{ time() }}">
+                            <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+                            </div>
 
                             <div class="row g-3">
                                 <div class="col-md-6">
